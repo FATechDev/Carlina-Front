@@ -242,6 +242,3 @@ A component for displaying a wide image.
 <WideImage src={importedImage} alt="alt description" />
 ```
 
-## 👀 Stuck?
-
-If you have any questions or need help with AstroPie, feel free to reach out to me at info@wpinfusion.com, or open an issue on the [AstroPie GitHub repository](https://github.com/wpinfusion/AstroPie)
