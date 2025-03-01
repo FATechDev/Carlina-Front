@@ -1,6 +1,6 @@
 export const menuMain = [
     {
-        name: "Home",
+        name: "Accueil",
         url: "/",
         highlighted: false,
     },
@@ -10,22 +10,22 @@ export const menuMain = [
         highlighted: false,
     },
     {
-        name: "About Us",
+        name: "A Propos",
         url: "/about-us",
         highlighted: false,
     },
     {
-        name: "Gallery",
+        name: "Galerie",
         url: "/gallery",
         highlighted: false,
     },
     {
-        name: "Contact",
+        name: "Contactez-Nous",
         url: "/contact",
         highlighted: false,
     },
     {
-        name: "Book",
+        name: "Réserver",
         url: "/book",
         highlighted: true,
     },
