@@ -1,27 +1,32 @@
 [
 	{
 		"id": 1,
-		"author": "Jane Doe",
-		"review": "The food was amazing! I loved the atmosphere and the service was great."
+		"author": "Mona B.",
+		"review": "Un saveur hyper chaleureux et très à l’écoute. Des plats délicieux. Je recommande à 1000% et je reviendrai. Franchement la qualité du service est à féliciter",
+		"mealImage":"/src/assets/images/reviews/mona.jpg"
 	},
 	{
 		"id": 2,
-		"author": "John Smith",
-		"review": "The best Italian food I've ever had. I can't wait to come back!"
+		"author": "Laurence J",
+		"review": "Un endroit sympa. Ne pas hésiter à regarder les ardoises en salle qui proposent bien plus de choix que le menu. Des produits frais et des plats conviviaux.",
+		"mealImage":"/src/assets/images/reviews/laurence.jpg"
 	},
 	{
 		"id": 3,
-		"author": "Alice Johnson",
-		"review": "The pasta was perfectly cooked and the sauce was delicious. I highly recommend this restaurant."
+		"author": "Michel K",
+		"review": "Nous avions la mission immédiate de faire découvrir la ville de Meulan et son histoire à une centaine de personnes. C'est pourquoi j'ai, particulièrement apprécié le bon accueil et l'excellente organisation pour la prise de commande, à distance et à l'avance, des six pizzas de notre groupe.",
+		"mealImage":"/src/assets/images/reviews/Michel.jpg"
 	},
 	{
 		"id": 4,
-		"author": "Bob Brown",
-		"review": "The pizza was fantastic! I will definitely be ordering from here again."
+		"author": "QuiltonSebastien",
+		"review": "Les années passent et ce restaurant fait toujours partie de mes habitudes. Personnel charmant, souriant et à l’écoute. La cuisine quand à elle est variée avec de très bonne suggestion. Le tout à tarif raisonnable. Tout est réuni pour passer un agréable moment.",
+		"mealImage":"/src/assets/images/reviews/sebastien.jpg"
 	},
 	{
 		"id": 5,
-		"author": "Sarah Wilson",
-		"review": "The tiramisu was to die for. I will be dreaming about it for weeks."
+		"author": "Alain M",
+		"review": "Soirée organisé par la Sculture.Personnels agréables ,les pizzas sont très bonnes le reste des plats ont l air bien servie.",
+		"mealImage":"/src/assets/images/reviews/mona.jpg"
 	}
 ]

@@ -1,0 +1,32 @@
+---
+import { Picture } from "astro:assets";
+import CircleTrust from "~/assets/trustpilot.svg";
+import CircleTrustWhite from "~/assets/trustpilot_white.svg";
+import LogoTrust from "~/assets/logo_trustpilot.svg";
+---
+
+<section class="tripadvisor-section py-16 ">
+  <div class="container flex flex-col justify-center items-center text-center">
+    <!-- "EXCELLENT" en gras -->
+    <h2 class="text-2xl text-white font-extrabold mb-4">EXCELLENT</h2>
+
+    <!-- Les logos Tripadvisor répétés -->
+    <div class="tripadvisor-logos flex space-x-4 mb-8">
+      <Picture src={CircleTrust} alt="Tripadvisor" class="w-12 h-12" />
+      <Picture src={CircleTrust} alt="Tripadvisor" class="w-12 h-12" />
+      <Picture src={CircleTrust} alt="Tripadvisor" class="w-12 h-12" />
+      <Picture src={CircleTrust} alt="Tripadvisor" class="w-12 h-12" />
+      <Picture src={CircleTrustWhite} alt="Tripadvisor" class="w-12 h-12" />
+    </div>
+
+    <!-- Texte pour la note -->
+    <div class="review-text mb-8">
+      <h2 class="text-xl font-semibold text-white">Basée sur 560 avis</h2>
+    </div>
+
+    <!-- Logo Tripadvisor -->
+    <div>
+      <Picture src={LogoTrust} alt="Tripadvisor Logo" class="w-48 h-auto mx-auto" />
+    </div>
+  </div>
+</section>

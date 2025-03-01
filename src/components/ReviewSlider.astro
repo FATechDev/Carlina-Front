@@ -1,23 +1,72 @@
 ---
 import { getCollection } from "astro:content";
 const allReviews = await getCollection("reviews");
+import { Picture } from "astro:assets";
+
+import Hook from "~/assets/icon_hook.svg";
+
+import MonaImage from '~/assets/images/reviews/mona.jpg';
+import LaurenceImage from '~/assets/images/reviews/laurence.jpg';
+import MichelImage from '~/assets/images/reviews/Michel.jpg';
+import SebastienImage from '~/assets/images/reviews/sebastien.jpg';
 ---
 
 <div class="swiper w-full mt-8 bg-white rounded-lg">
-	<div class="swiper-wrapper h-auto w-auto pt-8 pb-12">
+	<div class="swiper-wrapper h-auto w-auto ">
 		{
-			allReviews.map((review) => (
-				<div class="swiper-slide cursor-pointer select-none">
-					<div class="px-4 lg:px-8">
-						<blockquote class="border-none">
-							<p class="text-center font-medium text-2xl text-balance">{review.data.review}</p>
-							<footer class="text-center mt-4">
-								— <cite>{review.data.author}</cite>
-							</footer>
-						</blockquote>
-					</div>
+			allReviews.map((review, index) => {
+        // Sélectionner l'image correspondante en fonction de l'index
+        let mealImage;
+        switch (index) {
+          case 0:
+            mealImage = MonaImage;
+            break;
+          case 1:
+            mealImage = LaurenceImage;
+            break;
+          case 2:
+            mealImage = MichelImage;
+            break;
+          case 3:
+            mealImage = SebastienImage;
+            break;
+          default:
+            mealImage = MonaImage; // Valeur par défaut si besoin
+        }
+
+        return (
+          <div class="swiper-slide cursor-pointer select-none">
+            <div class="flex items-center justify-between m-4">
+              <div>
+                <h3 class="font-semibold text-lg">{review.data.author}</h3>
+                <h5 class="text-gray-500 text-xs mt-1">24 Mars 2025</h5>
+              </div>
+
+              <Picture
+                class="w-6 h-6 mx-auto"
+                src={Hook}
+                alt="A Hook"
+              />
+            </div>
+
+			<div class="flex items-center m-8 space-x-6">
+				<Picture
+					class="w-32 h-32 object-cover rounded-lg"
+					src={mealImage} 
+					alt="Repas image"
+				/>
+
+				<div class="flex-1 px-4 lg:px-8">
+					<blockquote class="border-none">
+					<p class="text-sm font-medium text-balance">{review.data.review}</p>
+					</blockquote>
 				</div>
-			))
+			</div>
+
+
+          </div>
+        );
+      })
 		}
 	</div>
 	<div class="swiper-pagination"></div>

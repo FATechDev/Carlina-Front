@@ -10,6 +10,7 @@ export default {
 				brand: {
 					green: "#157F71",
 					red: "#DB1D00",
+					trustpilot:"#34e0a1",
 				},
 			},
 			container: {

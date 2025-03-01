@@ -8,7 +8,7 @@ export const themeColor = "#FF0000";
 
 export const phone = {
 	href: "tel:+123456789",
-	label: "(123) 456-789",
+	label: "0134744405",
 };
 
 export const email = {

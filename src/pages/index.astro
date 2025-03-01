@@ -7,18 +7,23 @@ import Badge from "~/components/Badge.astro";
 import Button from "~/components/Button.astro";
 import ButtonCallUs from "~/components/ButtonCallUs.astro";
 import Grid from "~/components/Grid.astro";
+import TripadvisorSection from "~/components/TripadvisorSection.astro";
 import Heading from "~/components/Heading.astro";
 import WideImage from "~/components/WideImage.astro";
 import ReviewSlider from "~/components/ReviewSlider.astro";
+import Map from "~/components/Map.astro";
 
 // Images
-import PizzaHero from "~/assets/images/plat/pizza2.jpg";
-import Pizza from "~/assets/images/plat/pizza1.jpg";
-import Spaghetti from "~/assets/images/plat/spaghettis.jpg";
-import Fish from "~/assets/images/plat/plateau-fromage.jpg";
-import DecorativeImage from "~/assets/images/decor/noel_1.jpg";
+import PizzaHero from "~/assets/images/plat/pizza2.png";
+import TrustPilot from "~/assets/images/decor/truspilot.png";
+import Pizza2 from "~/assets/images/plat/pizza3.avif";
+import Pizza from "~/assets/images/plat/pizza1.png";
+import Spaghetti from "~/assets/images/plat/spaghetti.png";
+import PlateauFromage from "~/assets/images/plat/plateau_fromage.png";
+import Salade from "~/assets/images/salades/salade.png";
+import DecorativeImage from "~/assets/images/decor/noel_3.jpg";
 import reviewAuthors from "~/assets/images/decor/noel_1.jpg";
-import Dessert from "~/assets/images/decor/noel_1.jpg";
+import Dessert from "~/assets/images/dessert/cream-dessert.png";
 import Mussels from "~/assets/images/decor/noel_1.jpg";
 ---
 
@@ -26,19 +31,18 @@ import Mussels from "~/assets/images/decor/noel_1.jpg";
 	<Section class:list={"bg-white"}>
 		<Hero>
 			<div slot="hero-content-left" class="prose max-w-none max-lg:order-1">
-				<Badge title="il ristorante italiana" />
-				<h1 class="font-black">Real Italian food in a real Italian restaurant...</h1>
+				<Badge title="Ristorante italiana" />
+				<h2 class="font-black">De la vraie cuisine italienne dans un vrai restaurant italien...</h1>
 
 				<p>
-					Experience the taste of Italy with our authentic dishes made from the finest ingredients. Indulge in
-					our wide variety of pizzas, pastas, and desserts, all crafted with love and tradition. Whether
-					you're dining in or taking out, we promise a memorable culinary experience.
+					Découvrez le goût de l'Italie avec nos plats authentiques préparés à partir des meilleurs ingrédients. Offrez-vous
+					notre grande variété de pizzas, pâtes et desserts, tous préparés avec amour et tradition. Que vous dîniez sur place ou à emporter, nous vous promettons une expérience culinaire mémorable.
 				</p>
 
-				<span class="text-brand-green font-medium">✔ We also deliver</span>
+				<span class="text-brand-green font-medium">✔ Nous livrons aussi ...</span>
 
 				<div class="mt-8 flex items-center gap-x-8">
-					<Button url="/book">Book now</Button>
+					<Button url="/book">Réservez Maintenant</Button>
 					<ButtonCallUs />
 				</div>
 			</div>
@@ -60,9 +64,9 @@ import Mussels from "~/assets/images/decor/noel_1.jpg";
 
 	<Section class:list={"bg-white"}>
 		<Heading>
-			<h2 slot="heading-title" class="font-black text-brand-green h2">Our dishes</h2>
+			<h2 slot="heading-title" class="font-black text-brand-green h2">Notre Carte</h2>
 			<p slot="heading-content">
-				Explore our selection of authentic Italian dishes, from classic pizzas to homemade pastas.
+				Plongez dans l'univers savoureux de la cuisine italienne avec notre sélection de plats authentiques. Dégustez des pizzas traditionnelles cuites au feu de bois, avec une pâte croustillante et dorée, ou laissez-vous séduire par nos pâtes faites maison, préparées avec des ingrédients de première qualité. Chaque bouchée est une invitation au voyage, un mélange harmonieux de saveurs audacieuses, d'herbes fraîches et de recettes transmises de génération en génération.
 			</p>
 		</Heading>
 
@@ -75,10 +79,9 @@ import Mussels from "~/assets/images/decor/noel_1.jpg";
 						formats={["avif", "webp"]}
 						alt="A description of my image."
 					/>
-					<h3 class="h4 mt-0 font-black">Pasta &amp; Spaghetti</h3>
+					<h3 class="h4 mt-0 font-black">Nos Pizzas</h3>
 					<p>
-						Pasta is a staple of Italian cuisine, with a rich history dating back centuries. It comes in
-						various shapes and sizes, each suited to different sauces and preparations.
+						Symbole emblématique de l’Italie, la pizza est bien plus qu’un simple plat : c’est un art culinaire. Préparée avec une pâte moelleuse et dorée, puis garnie d’ingrédients frais et savoureux, chaque pizza raconte une histoire de tradition et de passion.
 					</p>
 				</div>
 			</div>
@@ -91,10 +94,9 @@ import Mussels from "~/assets/images/decor/noel_1.jpg";
 						formats={["avif", "webp"]}
 						alt="A description of my image."
 					/>
-					<h3 class="h4 mt-0 font-black">Pasta &amp; Spaghetti</h3>
+					<h3 class="h4 mt-0 font-black">Nos Pâtes &amp; Spaghettis</h3>
 					<p>
-						Pasta is a staple of Italian cuisine, with a rich history dating back centuries. It comes in
-						various shapes and sizes, each suited to different sauces and preparations.
+						Les pâtes sont un incontournable de la cuisine italienne, héritage d’une tradition culinaire vieille de plusieurs siècles.  Elles se déclinent en une multitude de formes et de tailles, chacune étant parfaitement adaptée à une sauce ou une préparation spécifique.
 					</p>
 				</div>
 			</div>
@@ -103,11 +105,11 @@ import Mussels from "~/assets/images/decor/noel_1.jpg";
 				<div class="flex flex-col items-center prose text-center">
 					<Picture
 						class:list={"not-prose w-full h-auto"}
-						src={Fish}
+						src={Salade}
 						formats={["avif", "webp"]}
 						alt="A description of my image."
 					/>
-					<h3 class="h4 mt-0 font-black">Pasta &amp; Spaghetti</h3>
+					<h3 class="h4 mt-0 font-black">Nos Salades</h3>
 					<p>
 						Pasta is a staple of Italian cuisine, with a rich history dating back centuries. It comes in
 						various shapes and sizes, each suited to different sauces and preparations.
@@ -120,18 +122,14 @@ import Mussels from "~/assets/images/decor/noel_1.jpg";
 	<Section class:list={"bg-white"}>
 		<Hero>
 			<div slot="hero-content-left" class="prose lg:order-2">
-				<h1 class="font-black">Pizza</h1>
+				<h1 class="font-black">A Propos De La Pizza ?</h1>
 
 				<p>
-					Pizza is a beloved dish that originated in Italy and has since become a global sensation. Its
-					versatility allows for endless combinations of toppings, from classic margherita with fresh
-					tomatoes, mozzarella, and basil, to more adventurous options like barbecue chicken or vegan cheese.
+					La pizza, née en Italie, est aujourd’hui une véritable icône mondiale. Sa polyvalence permet une infinité de garnitures, de la classique Margherita aux tomates fraîches, mozzarella et basilic, aux créations plus audacieuses comme le poulet barbecue ou le fromage végétal. Un plaisir gourmand pour tous les goûts ! 🍕
 				</p>
 
 				<p>
-					Whether enjoyed at a cozy pizzeria or delivered to your doorstep, pizza brings people together and
-					satisfies cravings like no other food. Beyond its delicious taste, pizza also holds cultural
-					significance. It is often associated with gatherings, celebrations, and comfort.
+					Que ce soit dégustée dans une pizzeria chaleureuse ou livrée à domicile, la pizza rassemble et comble toutes les envies. Au-delà de son goût savoureux, elle porte une véritable dimension culturelle, symbole de convivialité, de partage et de réconfort. 🍕✨
 				</p>
 
 				<div class="mt-8">
@@ -148,14 +146,14 @@ import Mussels from "~/assets/images/decor/noel_1.jpg";
 								d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z"
 								clip-rule="evenodd"></path>
 						</svg>
-						View menu
+						Voir Le Menu
 					</Button>
 				</div>
 			</div>
 			<div slot="hero-content-right">
 				<Picture
 					class:list={"mx-auto"}
-					src={PizzaHero}
+					src={Pizza2}
 					height={600}
 					formats={["avif", "webp"]}
 					alt="A description of my image."
@@ -167,8 +165,8 @@ import Mussels from "~/assets/images/decor/noel_1.jpg";
 	<Section class:list={"bg-white"}>
 		<Hero>
 			<div slot="hero-content-left" class="prose max-w-none max-lg:order-1">
-				<Badge color="red" title="delicious" />
-				<h2 class="font-black h2 my-4">Plate of the week</h2>
+				<Badge color="red" title="Delicieux" />
+				<h2 class="font-black h2 my-4">Le Plat De La Seamine</h2>
 
 				<span class="text-brand-red text-2xl font-bold italic">Fresh Mussels!</span>
 
@@ -195,18 +193,18 @@ import Mussels from "~/assets/images/decor/noel_1.jpg";
 	</Section>
 
 	<!-- Reviews -->
-	<Section class:list={"bg-brand-red/20 relative"}>
-		<div class="py-16">
+	<Section class:list={" bg-brand-trustpilot/90 relative"}>
+		<div class="py-8">
 			<Hero>
-				<div slot="hero-content-left" class="prose max-w-none order-2">
+				<div slot="hero-content-left" class="prose max-w-none order-2 ">
 					<div class="text-center not-prose">
-						<Badge color="white" title="reviews" />
+						<Badge color="white" title="Avis Clients" />
 					</div>
-					<h2 slot="heading-title" class="font-black h4 text-center mt-0 mb-4">What our customers say...</h2>
+					<h2 slot="heading-title" class="font-black h4 text-center mt-0 mb-4">Ce que disent nos clients...</h2>
 					<div slot="heading-content">
 						<p class="text-center">
-							Don't just take our word for it. Read what our customers have to say about their dining
-							experience at our restaurant.
+							Ne vous contentez pas de nous croire sur parole. Lisez ce que nos clients disent de leur 
+							expérience dans notre restaurant. sur TrustPilot
 						</p>
 
 						<ReviewSlider />
@@ -214,7 +212,7 @@ import Mussels from "~/assets/images/decor/noel_1.jpg";
 				</div>
 
 				<div slot="hero-content-right">
-					<Picture src={reviewAuthors} alt="Review authors" class="w-full h-auto" />
+					<TripadvisorSection />
 				</div>
 			</Hero>
 		</div>
@@ -247,22 +245,17 @@ import Mussels from "~/assets/images/decor/noel_1.jpg";
 	<Section class:list={"bg-white"}>
 		<Hero>
 			<div slot="hero-content-left" class="prose max-w-none order-2">
-				<Badge title="dolce" />
-				<h2 slot="heading-title" class="font-black text-brand-green h2 my-4">Desserts</h2>
+				<Badge title="Une Touche De Douceur" />
+				<h2 slot="heading-title" class="font-black text-brand-green h2 my-4">Les Desserts</h2>
 				<div slot="heading-content">
 					<p>
-						Indulge in our selection of sweet treats, from classic tiramisu to decadent chocolate cake. Our
-						desserts are the perfect way to end your meal on a high note.
+						Laissez-vous tenter par notre sélection de douceurs, du traditionnel tiramisu au fondant au chocolat gourmand. Nos desserts sont la touche finale idéale pour terminer votre repas en beauté. 🍰✨
 					</p>
 
-					<p>
-						Experience the taste of Italy with our authentic dishes made from the finest ingredients.
-						Indulge in our wide variety of pizzas, pastas, and desserts, all crafted with love and
-						tradition. Whether you're dining in or taking out, we promise a memorable culinary experience.
-					</p>
+
 
 					<div class="mt-8">
-						<Button url="/menu">See our menu</Button>
+						<Button url="/menu">Voir Nos Desserts</Button>
 					</div>
 				</div>
 			</div>
@@ -283,33 +276,29 @@ import Mussels from "~/assets/images/decor/noel_1.jpg";
 	<Section class:list={"bg-white"}>
 		<Hero>
 			<div slot="hero-content-left" class="prose max-w-none">
-				<Badge color="red" title="benvenuto" />
-				<h2 slot="heading-title" class="font-black text-brand-red h2 my-4">Drop by and say hello</h2>
+				<Badge color="red" title="Bienvenue" />
+				<h2 slot="heading-title" class="font-black text-brand-red h2 my-4">Passez nous dire bonjour</h2>
 				<div slot="heading-content">
 					<p>
-						We're located in the heart of the city, just a stone's throw away from the main square. Our
-						restaurant is the perfect place to enjoy a delicious meal with friends and family.
+						Nous sommes situés au cœur de la ville De Meulan, à deux pas du bord de seine. Notre
+						restaurant est l'endroit idéal pour savourer un délicieux repas entre amis ou en famille.
 					</p>
 
 					<span class="text-brand-red font-medium">
-						✔ We also do take-away, so you can enjoy your food at home
+						✔ Nous plats sont également disponible à emporter pour que vous puissiez les partager à la maison en famille.
 					</span>
 
 					<div class="mt-8">
-						<Button color="red" url="/book">Book a table</Button>
+						<Button color="red" url="/book">Réservez Une Table</Button>
 					</div>
 				</div>
 			</div>
 
 			<div slot="hero-content-right">
-				<Picture
-					class:list={"mx-auto"}
-					src={Dessert}
-					height={600}
-					formats={["avif", "webp"]}
-					alt="A description of my image."
-				/>
-			</div>
+				<Map />
+			  </div>
 		</Hero>
+
+	
 	</Section>
 </Layout>
