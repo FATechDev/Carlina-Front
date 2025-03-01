@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@astrojs/alpinejs": "^0.4.1",
+    "@astrojs/cloudflare": "^12.2.3",
     "@astrojs/mdx": "^4.0.3",
     "@astrojs/tailwind": "^5.1.4",
     "@playform/inline": "^0.1.0",

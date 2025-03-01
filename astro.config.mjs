@@ -1,6 +1,6 @@
 // @ts-check
 import { defineConfig } from "astro/config";
-
+import cloudflare from '@astrojs/cloudflare';
 import tailwind from "@astrojs/tailwind";
 
 import alpinejs from "@astrojs/alpinejs";
@@ -22,11 +22,12 @@ export default defineConfig({
 			Critters: true,
 		}),
 	],
-	output: "static",
 	devToolbar: {
 		enabled: false,
 	},
 	experimental: {
 		svg: true,
 	},
+	output: 'static',
+    adapter: cloudflare(),
 });
