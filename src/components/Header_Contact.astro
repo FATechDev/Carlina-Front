@@ -4,9 +4,11 @@
 
 // Images
 import Kitchen from "~/assets/images/decor/kitchen.jpeg";
-import Logo from "~/assets/logo_trustpilot.svg";
+import Logo from "~/assets/logo_carlina.png";
 
 
+import { Image }  from "astro:assets";
+import Italia_Drapeau from "~/assets/images/decor/italy.png";
 
 import { menuMain } from "~/data/menus.js";
 
@@ -21,10 +23,10 @@ const pathname = rmTrailingSlash(Astro.url.pathname);
 
 
 
-<header x-data="{ open: false }" @keydown.window.escape="open = false"  class="bg-[url('../assets/images/decor/kitchen.jpeg')] bg-cover bg-center min-h-[600px] relative">
-	<div class="container py-6 ">
-		<nav class="flex items-center justify-between " aria-label="Global" >
-            <Logo />
+<header x-data="{ open: false }" @keydown.window.escape="open = false"  class="bg-[url('../assets/images/decor/kitchen.jpeg')] bg-cover bg-center min-h-[600px] relative brightness-85">
+	<div class="container py-6  static">
+		<nav class="flex items-center justify-between h-16" aria-label="Global" >
+            <Image src={Logo} class=" pointer-events-auto " alt="Drapeau italien" width={275} height={75} />
 			<div class="flex lg:hidden">
 				<button
 					type="button"
@@ -33,7 +35,7 @@ const pathname = rmTrailingSlash(Astro.url.pathname);
 				>
 					<span class="sr-only">Open main menu</span>
 					<svg
-						class="size-8 text-brand-green"
+						class="size-8 text-white"
 						fill="none"
 						viewBox="0 0 24 24"
 						stroke-width="1.5"
@@ -53,7 +55,7 @@ const pathname = rmTrailingSlash(Astro.url.pathname);
 					menuMain.map((item) => (
 						<a
 							href={item.url}
-							class={`transition text-base/6 font-semibold hover:text-brand-green ${item.highlighted ? "menu-item-highlighted" : ""} ${pathname === item.url ? "menu-item-active" : ""}`}
+							class={`transition text-base/6 text-gray-300  text-lg font-semibold hover:text-white ${item.highlighted ? "menu-item-highlighted" : ""} ${pathname === item.url ? "menu-item-active" : ""}`}
 						>
 							{item.name}
 						</a>
@@ -61,11 +63,13 @@ const pathname = rmTrailingSlash(Astro.url.pathname);
 				}
 			</div>
 		</nav>
-        <div >
-            <h3>Venez Gouter Notre Cuisine</h3>
-            <h1>Contact</h1>
-   
+        <div class="flex absolute inset-0 flex-col items-center justify-center text-white text-center pointer-events-none">
+            <h3 class="text-sm pointer-events-auto">Venez Goûter Notre Cuisine</h3>
+            <h1 class="text-6xl mt-10 pointer-events-auto">Nous contacter</h1>
+            <Image src={Italia_Drapeau} class="mt-10 pointer-events-auto" alt="Drapeau italien" width={128} height={128} />
         </div>
+        
+        
 		<div class="lg:hidden" x-ref="dialog" x-show="open" x-cloak aria-modal="true">
 			<div
 				class="fixed inset-0 z-50 w-full overflow-y-auto bg-white px-8 py-6"
