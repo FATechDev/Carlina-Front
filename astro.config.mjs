@@ -2,6 +2,7 @@
 import { defineConfig } from "astro/config";
 import cloudflare from '@astrojs/cloudflare';
 import tailwind from "@astrojs/tailwind";
+import vue from '@astrojs/vue';
 
 import alpinejs from "@astrojs/alpinejs";
 
@@ -18,6 +19,7 @@ export default defineConfig({
 		tailwind(),
 		alpinejs(),
 		mdx(),
+		vue(),
 		(await import("@playform/inline")).default({
 			Critters: true,
 		}),

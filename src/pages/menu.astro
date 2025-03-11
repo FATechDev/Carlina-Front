@@ -1,19 +1,18 @@
 ---
-import Layout from "~/layouts/Layout.astro";
-import Section from "~/components/Section.astro";
-import Heading from "~/components/Heading.astro";
-import MenuList from "~/components/Menu.astro";
+import RecipeCard from '~/components/Vue/RecipeCard.vue';
+
+const recipe = {
+  id: 1,
+  name: "Pizza Margherita",
+  description: "Une délicieuse pizza traditionnelle avec sauce tomate, mozzarella et basilic.",
+  image: "/assets/images/plat/pizza1.png"
+};
 ---
 
-<Layout>
-	<Section>
-		<Heading>
-			<h1 slot="heading-title" class="font-black text-brand-green h2">Notre Menu</h1>
-			<p slot="heading-content">
-				Nous proposons une variété de plats, du traditionnel au moderne, qui sauront satisfaire vos envies.
-			</p>
-		</Heading>
-
-		<MenuList />
-	</Section>
-</Layout>
+<html lang="fr">
+  <body>
+    <h1>Notre Menu</h1>
+    <!-- On passe la recette au composant -->
+    <RecipeCard client:load recipe={recipe} />
+  </body>
+</html>
