@@ -31,5 +31,11 @@ export default defineConfig({
 		svg: true,
 	},
 	output: 'static',
-    adapter: cloudflare(),
+	adapter: cloudflare({
+		routes: {
+		  extend: {
+			include: [{ pattern: '/*' }]
+		  }
+		}
+	  })
 });
