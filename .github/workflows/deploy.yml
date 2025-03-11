@@ -20,13 +20,13 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '16'
+          node-version: '20'
 
       # Install dependencies
       - name: Install dependencies
         run: npm install
 
-      # Build your site (adjust if your build script is different)
+
       - name: Build site
         run: npm run build
 
@@ -37,4 +37,4 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           projectName: 'carlina-site'
-          directory: './build'             # Replace with the output directory of your build
+          directory: './build'      
