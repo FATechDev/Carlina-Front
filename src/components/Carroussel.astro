@@ -1,0 +1,65 @@
+---
+
+import { Picture, Image } from "astro:assets";
+const { image1,image2,image3, alt, class: className = "" } = Astro.props;
+
+---
+<div
+  id="carouselExampleSlidesOnly"
+  class="relative mx-auto"
+  data-twe-carousel-init
+  data-twe-ride="carousel" >
+  <!--Carousel items-->
+  <div
+    class="relative w-full overflow-hidden after:clear-both after:block after:content-['']">
+    <!--First item-->
+    <div
+      class="relative float-left -mr-[100%] w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+      data-twe-carousel-item
+      data-twe-carousel-active>
+      <Image
+      src={image2}
+      alt={alt}
+      class:list={[className, "block w-full h-[500px]"]}
+      />
+      <div class="absolute inset-0 flex flex-col items-center justify-center text-center text-white bg-gradient-to-t from-black/70 to-black/20">
+        <h5 class="text-xl font-bold text-shadow">Carlina Restaurant</h5>
+        <p class="max-w-md px-4">
+          Découvrez l'art culinaire de notre restaurant, où chaque plat est une véritable œuvre d'art.
+        </p>
+      </div>
+    </div>
+    <!--Second item-->
+    <div
+      class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+      data-twe-carousel-item>
+      <Image
+      src={image2}
+      alt={alt}
+      class:list={[className, "block w-full h-[500px]"]}
+      />
+      <div class="absolute inset-0 flex flex-col items-center justify-center text-center text-white bg-gradient-to-t from-black/70 to-black/20">
+        <h5 class="text-xl font-bold text-shadow">Carlina Restaurant</h5>
+        <p class="max-w-md px-4">
+          Découvrez l'art culinaire de notre restaurant, où chaque plat est une véritable œuvre d'art.
+        </p>
+      </div>
+    </div>
+    <!--Third item-->
+    <div
+      class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+      data-twe-carousel-item>
+      <Image
+      src={image2}
+      alt={alt}
+      class:list={[className, "block w-full h-[500px]"]}
+      />
+<div class="absolute inset-0 flex flex-col items-center justify-center text-center text-white bg-gradient-to-t from-black/70 to-black/20">
+  <h5 class="text-xl font-bold text-shadow">Carlina Restaurant</h5>
+  <p class="max-w-md px-4">
+    Découvrez l'art culinaire de notre restaurant, où chaque plat est une véritable œuvre d'art.
+  </p>
+</div>
+    </div>
+  </div>
+</div>

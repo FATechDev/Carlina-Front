@@ -6,6 +6,7 @@ import { Picture } from "astro:assets";
 import Hook from "~/assets/icon_hook.svg";
 
 import MonaImage from '~/assets/images/reviews/mona.jpg';
+import MonaPerson from '~/assets/images/reviews/mona_person.jpg';
 import LaurenceImage from '~/assets/images/reviews/laurence.jpg';
 import MichelImage from '~/assets/images/reviews/Michel.jpg';
 import SebastienImage from '~/assets/images/reviews/sebastien.jpg';
@@ -35,36 +36,42 @@ import SebastienImage from '~/assets/images/reviews/sebastien.jpg';
         }
 
         return (
-          <div class="swiper-slide cursor-pointer select-none">
-            <div class="flex items-center justify-between m-4">
-              <div>
-                <h3 class="font-semibold text-lg">{review.data.author}</h3>
-                <h5 class="text-gray-500 text-xs mt-1">24 Mars 2025</h5>
-              </div>
-
-              <Picture
-                class="w-6 h-6 mx-auto"
-                src={Hook}
-                alt="A Hook"
-              />
+		<div class="swiper-slide cursor-pointer select-none">
+    <div class="flex items-center justify-between mx-2 sm:mx-4">
+        <div class="flex justify-center items-center gap-3 sm:gap-4">
+            <Picture
+                class="w-12 h-12 sm:w-14 sm:h-14 object-cover rounded-full"
+                src={MonaPerson}
+                alt="Repas image"
+            />
+            <div>
+                <h6 class="font-semibold text-base sm:text-lg">{review.data.author}</h6>
+                <h8 class="text-gray-500 text-xs sm:text-sm">24 Mars 2025</h8>
             </div>
+        </div>
 
-			<div class="flex items-center m-8 space-x-6">
-				<Picture
-					class="w-32 h-32 object-cover rounded-lg"
-					src={mealImage} 
-					alt="Repas image"
-				/>
+        <Picture
+            class="w-5 h-5 sm:w-6 sm:h-6 mx-auto"
+            src={Hook}
+            alt="A Hook"
+        />
+    </div>
 
-				<div class="flex-1 px-4 lg:px-8">
-					<blockquote class="border-none">
-					<p class="text-sm font-medium text-balance">{review.data.review}</p>
-					</blockquote>
-				</div>
-			</div>
+    <div class="flex items-center m-2 sm:m-4">
+        <Picture
+            class="w-24 h-24 sm:w-32 sm:h-32 object-cover rounded-lg ml-2 sm:ml-4"
+            src={mealImage}
+            alt="Repas image"
+        />
 
+        <div class="flex-1 px-4 sm:px-6 lg:px-8">
+            <blockquote class="border-none">
+                <p class="text-sm sm:text-base font-medium text-balance">{review.data.review}</p>
+            </blockquote>
+        </div>
+    </div>
+</div>
 
-          </div>
         );
       })
 		}

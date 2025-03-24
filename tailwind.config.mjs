@@ -1,10 +1,12 @@
 /** @type {import('tailwindcss').Config} */
+import twElements from 'tw-elements/plugin.cjs';
 export default {
-	content: ["./src/**/*.{astro,html,js,jsx,ts,tsx}"],
+	content: ["./src/**/*.{astro,html,js,jsx,ts,tsx}","./node_modules/tw-elements/js/**/*.js",],
 	theme: {
 		extend: {
 			fontFamily: {
 				inter: ["Inter", "sans-serif"],
+				'herrvonmuellerhoff': ['"Herr Von Muellerhoff"', 'cursive'],
 			},
 			colors: {
 				brand: {
@@ -12,6 +14,7 @@ export default {
 					red: "#DB1D00",
 					trustpilot:"#34e0a1",
 				},
+				'custom-gold': '#c5a05b',
 			},
 			container: {
 				center: true,
@@ -115,5 +118,5 @@ export default {
 			}),
 		},
 	},
-	plugins: [require("@tailwindcss/typography")],
+	plugins: [require("@tailwindcss/typography"),twElements,],
 };

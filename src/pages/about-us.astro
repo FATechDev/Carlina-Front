@@ -2,88 +2,130 @@
 import Layout from "~/layouts/Layout.astro";
 import Section from "~/components/Section.astro";
 import Hero from "~/components/Hero.astro";
-import { Picture } from "astro:assets";
+import { Picture, Image } from "astro:assets";
 import Badge from "~/components/Badge.astro";
 import Button from "~/components/Button.astro";
 import ButtonCallUs from "~/components/ButtonCallUs.astro";
 import Article from "~/components/Article.astro";
+import Parallax from "~/components/Parallax.astro";
 
 // Images
-import PizzaHero from "~/assets/images/decor/noel_1.jpg";
+import Terrasse from "~/assets/images/decor/terrasse_resize.jpg";
+import Terrasse2 from "~/assets/images/decor/terrasse2.jpg";
+import Burrata from "~/assets/images/plat/burrata_citron_resize.jpg";
+import Pizza from "~/assets/images/plat/pizza.jpg";
+import PhotoResto2 from "~/assets/images/restaurant_photo_2.jpg";
+import Cosmopolitan from "~/assets/images/boisson/cosmopolitan_on_point_resize.jpg";
+import WideImageText from "~/components/WideImageText.astro";
+
 
 ---
 
 <Layout>
-	<Section class:list={"bg-white"}>
-		<Hero>
-			<div slot="hero-content-left" class="prose max-w-none max-lg:order-1">
-				<Badge title="il ristorante italiana" />
-				<h1 class="font-black">Real Italian food in a real Italian restaurant...</h1>
+	<Section class:list={"bg-white"} contain={false}>
 
-				<p>
-					Experience the taste of Italy with our authentic dishes made from the finest ingredients. Indulge in
-					our wide variety of pizzas, pastas, and desserts, all crafted with love and tradition. Whether
-					you're dining in or taking out, we promise a memorable culinary experience.
+		<WideImageText image={PhotoResto2} title="La Carlina" text="Notre Restaurant" alt="Just an image" class:list={"aspect-video lg:aspect-[16/6]"} />
+		<Hero>
+			<div slot="hero-content-left" class="prose max-w-none max-lg:order-1 ml-10 ">
+				
+				<p class="text-sm ">
+					La Villa César est un restaurant de spécialité italienne qui est situé aux Mureaux dans les Yvelines (78).
 				</p>
 
-				<span class="text-brand-green font-medium">✔ We also deliver</span>
+				<p class="text-sm mt-10">
+					N’attendez plus pour réserver votre table chez nous et pour découvrir notre carte variée.
+					Pizza au feu de bois sur place ou à emporter ouvert 7j/7.
+				</p>
 
-				<div class="mt-8 flex items-center gap-x-8">
-					<Button url="/book">Book now</Button>
-					<ButtonCallUs />
-				</div>
+				<p class="text-sm mt-10">
+					Nous sommes à votre disposition pour répondre à vos questions concernant nos événements et nos formules d’organisation de réceptions.
+				</p>
+
+
 			</div>
 			<div slot="hero-content-right">
-				<Picture
-					class:list={"mx-auto"}
-					src={PizzaHero}
-					height={600}
-					formats={["avif", "webp"]}
-					alt="A description of my image."
-					loading={"eager"}
-					fetchpriority={"high"}
-				/>
+
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-8 m-10">
+					<!-- Image en haut à gauche -->
+					<div class="relative">
+					  <Image 
+						src={Burrata}
+						alt="Image 1" 
+						class="w-full h-auto object-cover " 
+						width={500} 
+						height={300} 
+					  />
+					</div>
+				  
+					<!-- Image en haut à droite -->
+					<div class="relative">
+					  <Image 
+						src={Terrasse}
+						alt="Image 2" 
+						class="w-full h-auto object-cover " 
+						width={500} 
+						height={300} 
+					  />
+					</div>
+				  
+					<!-- Image en bas à gauche -->
+					<div class="relative">
+					  <Image 
+						src={Cosmopolitan}
+						alt="Image 3" 
+						class="w-full h-auto object-cover " 
+						width={500} 
+						height={300} 
+					  />
+					</div>
+				  
+					<!-- Image en bas à droite -->
+					<div class="relative">
+					  <Image 
+						src={Pizza} 
+						alt="Image 4" 
+						class="w-full h-auto object-cover " 
+						width={500} 
+						height={300} 
+					  />
+					</div>
+				  </div>
+
+				
 			</div>
 		</Hero>
 	</Section>
 
+	<Parallax image={Terrasse2}  alt="Belle image en parallax" 
+	title="Bienvenue" 
+	text="Profitez de l'effet parallax"/>
+
 	<Section class:list={'bg-white'}>
 		<Article>
-			<h2>Welcome to AstroPie</h2>
+			<h2 class="text-brand-green">Bienvenue chez Carlina Meulan</h2>
 			<p>
-				Nestled in the heart of the city, <strong>AstroPie</strong> offers an authentic Italian dining experience
-				like no other. From the moment you step through our doors, you'll be transported to the vibrant streets of
-				Italy, where good food and great company are at the center of life.
+				Situé au cœur de Meulan, <strong>Carlina Meulan</strong> vous propose une véritable expérience culinaire italienne comme nulle part ailleurs. Dès que vous franchissez nos portes, vous êtes transporté dans les rues animées de l'Italie, où de délicieuses pizzas et des pâtes maison vous attendent dans une ambiance chaleureuse et conviviale.
 			</p>
 
-			<h3>Our Story</h3>
+			<h3 class="text-brand-green">Notre Histoire</h3>
 			<p>
 				Founded in <em>1998</em>, our family-owned restaurant has always been a labor of love. Inspired by the
 				recipes passed down through generations, we bring the <u>rich culinary heritage</u> of Italy to your plate.
 				Every dish tells a story, and every meal is a celebration of flavor.
 			</p>
 
-			<h3>Our Philosophy</h3>
-			<blockquote>"The secret ingredient is always love."</blockquote>
+			<h3 class="text-brand-green">Notre Philosophie</h3>
+			<blockquote>"L'ingrédient secret, c'est toujours l'amour."</blockquote>
 			<p>
-				At AstroPie, we believe in the simple joy of fresh ingredients, time-honored techniques, and a
-				passion for creating memorable meals. From our hand-rolled pasta to our wood-fired pizzas, every bite is
-				crafted with care.
+				Chez Carlina Meulan, nous croyons à la joie de cuisiner avec des ingrédients frais et de qualité. Nos recettes sont élaborées avec passion et soin, qu'il s'agisse de nos pizzas cuites au feu de bois, de nos sauces savoureuses ou de nos pâtes faites maison. Chaque bouchée est un véritable voyage en Italie, préparée avec amour.
 			</p>
 
-			<h4>What Makes Us Special?</h4>
+			<h4 class="text-brand-green">Ce qui fait notre Spécialité ?</h4>
 			<ul>
-				<li><strong>Authenticity:</strong> Traditional recipes, just like Nonna used to make.</li>
-				<li><strong>Fresh Ingredients:</strong> Locally sourced produce and imported Italian staples.</li>
-				<li><strong>Warm Atmosphere:</strong> A place where everyone feels like family.</li>
+				<li><strong>Authenticité:</strong> Des recettes italiennes traditionnelles, préparées comme le faisait Nonna.</li>
+				<li><strong>Ingrédients frais:</strong> Des produits locaux de qualité et des spécialités italiennes importées.</li>
+				<li><strong>Ambiance chaleureuse:</strong> Un lieu où tout le monde se sent chez soi, que ce soit pour un dîner décontracté ou pour une occasion spéciale.</li>
 			</ul>
-
-			<h3>Join Us</h3>
-			<p>
-				Whether you're celebrating a special occasion or simply indulging in the pleasures of Italian cuisine, <strong
-					>AstroPie</strong
-				> is the perfect destination. <em>Come for the food, stay for the memories.</em>
-			</p>
 		</Article>
 	</Section>
 </Layout>

@@ -7,7 +7,7 @@ const siteLangFormat = siteLang.replace("_", "-");
 
 <!-- Quick Nav -->
 <div class="mb-20 sticky top-8 z-10">
-	<nav class="bg-brand-green text-white rounded-full max-w-5xl mx-auto swiper-plates w-full">
+	<nav class="bg-brand-green text-white rounded-full max-w-4xl mx-auto swiper-plates ">
 		<ul id="plate-nav" class="px-6 py-3 swiper-wrapper h-auto w-auto">
 			{
 				plates.map((plate) => (
@@ -27,7 +27,7 @@ const siteLangFormat = siteLang.replace("_", "-");
 		plates.map((plate) => (
 			<div id={plate.data.slug} class="space-y-16 scroll-mt-20">
 				<div class="flex flex-col items-center gap-2 max-w-lg mx-auto text-balance text-center">
-					<h3 class="h4 text-brand-green/70">{plate.data.prettyName}</h3>
+					<h3 class="h4 text-brand-green/70">{plate.data.prettyName} </h3>
 					<p>{plate.data.description}</p>
 				</div>
 

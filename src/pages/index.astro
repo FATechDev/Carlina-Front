@@ -9,30 +9,33 @@ import ButtonCallUs from "~/components/ButtonCallUs.astro";
 import Grid from "~/components/Grid.astro";
 import TripadvisorSection from "~/components/TripadvisorSection.astro";
 import Heading from "~/components/Heading.astro";
-import WideImage from "~/components/WideImage.astro";
+import WideImageParallax from "~/components/WideImageParallax.astro";
 import ReviewSlider from "~/components/ReviewSlider.astro";
 import Map from "~/components/Map.astro";
+import GridCard from "~/components/GridCard.astro";
 
 // Images
 import PizzaHero from "~/assets/images/plat/pizza2.png";
-import TrustPilot from "~/assets/images/decor/truspilot.png";
-import Pizza2 from "~/assets/images/plat/pizza3.avif";
-import Pizza from "~/assets/images/plat/pizza1.png";
-import Spaghetti from "~/assets/images/plat/spaghetti.png";
-import PlateauFromage from "~/assets/images/plat/plateau_fromage.png";
-import Salade from "~/assets/images/salades/salade.png";
-import DecorativeImage from "~/assets/images/decor/noel_3.jpg";
-import reviewAuthors from "~/assets/images/decor/noel_1.jpg";
+import PhotoResto from "~/assets/images/restaurant_photo.jpg";
+import Carte2 from "~/assets/images/carte_resto_2.jpg";
+import Decor_Noel from "~/assets/images/decor/noel_2.jpg";
+import Madame from "~/assets/images/decor/souriante_madame.jpg";
+import Terrasse from "~/assets/images/decor/terrasse.jpg";
+import Terrasse2 from "~/assets/images/decor/terrasse2.jpg";
+import CartePaysage from "~/assets/images/carte_resto_paysage.jpg";
 import Dessert from "~/assets/images/dessert/cream-dessert.png";
 import Mussels from "~/assets/images/decor/noel_1.jpg";
+import GalleryCard from "~/components/GalleryCard.astro";
+
+
 ---
 
-<Layout title="Home" pageTitle="Home" description="Welcome to our restaurant!">
+<Layout title="Accueil" pageTitle="Accueil" description="Bienvenue Dans Notre Restaurant !">
 	<Section class:list={"bg-white"}>
 		<Hero>
 			<div slot="hero-content-left" class="prose max-w-none max-lg:order-1">
 				<Badge title="Ristorante italiana" />
-				<h2 class="font-black">De la vraie cuisine italienne dans un vrai restaurant italien...</h1>
+				<h2 class="font-black sm:mt-4 md:mt-4">De la vraie cuisine italienne dans un vrai restaurant italien...</h1>
 
 				<p>
 					Découvrez le goût de l'Italie avec nos plats authentiques préparés à partir des meilleurs ingrédients. Offrez-vous
@@ -60,104 +63,47 @@ import Mussels from "~/assets/images/decor/noel_1.jpg";
 		</Hero>
 	</Section>
 
-	<WideImage image={DecorativeImage} alt="Just an image" class:list={"aspect-video lg:aspect-[16/6]"} />
+	<WideImageParallax image={PhotoResto} alt="Just an image" class="aspect-video lg:aspect-[16/6]" />
 
-	<Section class:list={"bg-white"}>
-		<Heading>
-			<h2 slot="heading-title" class="font-black text-brand-green h2">Notre Carte</h2>
-			<p slot="heading-content">
-				Plongez dans l'univers savoureux de la cuisine italienne avec notre sélection de plats authentiques. Dégustez des pizzas traditionnelles cuites au feu de bois, avec une pâte croustillante et dorée, ou laissez-vous séduire par nos pâtes faites maison, préparées avec des ingrédients de première qualité. Chaque bouchée est une invitation au voyage, un mélange harmonieux de saveurs audacieuses, d'herbes fraîches et de recettes transmises de génération en génération.
-			</p>
-		</Heading>
+	
+  
 
-		<Grid>
-			<div slot="grid-content-1">
-				<div class="flex flex-col items-center prose text-center">
-					<Picture
-						class:list={"not-prose w-full h-auto"}
-						src={Pizza}
-						formats={["avif", "webp"]}
-						alt="A description of my image."
-					/>
-					<h3 class="h4 mt-0 font-black">Nos Pizzas</h3>
-					<p>
-						Symbole emblématique de l’Italie, la pizza est bien plus qu’un simple plat : c’est un art culinaire. Préparée avec une pâte moelleuse et dorée, puis garnie d’ingrédients frais et savoureux, chaque pizza raconte une histoire de tradition et de passion.
-					</p>
-				</div>
-			</div>
+	<Section class:list={"bg-white mt-20 mb-20"} contain={false}>
+		<GridCard />
 
-			<div slot="grid-content-2">
-				<div class="flex flex-col items-center prose text-center">
-					<Picture
-						class:list={"not-prose w-full h-auto"}
-						src={Spaghetti}
-						formats={["avif", "webp"]}
-						alt="A description of my image."
-					/>
-					<h3 class="h4 mt-0 font-black">Nos Pâtes &amp; Spaghettis</h3>
-					<p>
-						Les pâtes sont un incontournable de la cuisine italienne, héritage d’une tradition culinaire vieille de plusieurs siècles.  Elles se déclinent en une multitude de formes et de tailles, chacune étant parfaitement adaptée à une sauce ou une préparation spécifique.
-					</p>
-				</div>
-			</div>
-
-			<div slot="grid-content-3">
-				<div class="flex flex-col items-center prose text-center">
-					<Picture
-						class:list={"not-prose w-full h-auto"}
-						src={Salade}
-						formats={["avif", "webp"]}
-						alt="A description of my image."
-					/>
-					<h3 class="h4 mt-0 font-black">Nos Salades</h3>
-					<p>
-						Pasta is a staple of Italian cuisine, with a rich history dating back centuries. It comes in
-						various shapes and sizes, each suited to different sauces and preparations.
-					</p>
-				</div>
-			</div>
-		</Grid>
 	</Section>
 
 	<Section class:list={"bg-white"}>
 		<Hero>
-			<div slot="hero-content-left" class="prose lg:order-2">
-				<h1 class="font-black">A Propos De La Pizza ?</h1>
+			<div slot="hero-content-left" class="prose max-w-none max-lg:order-1">
+				<GalleryCard image1={Madame} image2={Terrasse} image3={CartePaysage} image4={Carte2} image5={Terrasse2} image6={Decor_Noel}  alt="Image Gallery"/>
 
-				<p>
-					La pizza, née en Italie, est aujourd’hui une véritable icône mondiale. Sa polyvalence permet une infinité de garnitures, de la classique Margherita aux tomates fraîches, mozzarella et basilic, aux créations plus audacieuses comme le poulet barbecue ou le fromage végétal. Un plaisir gourmand pour tous les goûts ! 🍕
-				</p>
-
-				<p>
-					Que ce soit dégustée dans une pizzeria chaleureuse ou livrée à domicile, la pizza rassemble et comble toutes les envies. Au-delà de son goût savoureux, elle porte une véritable dimension culturelle, symbole de convivialité, de partage et de réconfort. 🍕✨
-				</p>
-
-				<div class="mt-8">
-					<Button url="/menu">
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							viewBox="0 0 20 20"
-							fill="currentColor"
-							class="size-5 inline-block"
-							aria-hidden="true"
-						>
-							<path
-								fill-rule="evenodd"
-								d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z"
-								clip-rule="evenodd"></path>
-						</svg>
-						Voir Le Menu
-					</Button>
-				</div>
 			</div>
+
 			<div slot="hero-content-right">
-				<Picture
-					class:list={"mx-auto"}
-					src={Pizza2}
-					height={600}
-					formats={["avif", "webp"]}
-					alt="A description of my image."
-				/>
+
+				<div class="w-full  text-center">
+					<h2 class="text-5xl font-script text-brand-green mb-2">Consultez</h2>
+					<h3 class="text-3xl tracking-widest text-gray-700 mb-8">NOTRE CARTE</h3>
+					
+					<div class="text-center mb-8">
+					  <span class="inline-block h-px w-8 bg-gray-300"></span>
+					  <span class="inline-block mx-2">*</span>
+					  <span class="inline-block h-px w-8 bg-gray-300"></span>
+					</div>
+					
+					<p class="text-gray-600 mb-6">
+					  La Carlina vous propose de nombreuses formules pour tous les budgets.
+					</p>
+					
+					<p class="text-gray-600 mb-10">
+					  Consultez notre carte : Pizzas au feu de bois – Sur place et à emporter
+					</p>
+					
+					<a href="/menu" class="inline-block border border-brand-green text-brand-green px-6 py-2 hover:bg-brand-green hover:text-white transition duration-300">
+					  CONSULTEZ LA CARTE
+					</a>
+				  </div>
 			</div>
 		</Hero>
 	</Section>
@@ -166,7 +112,7 @@ import Mussels from "~/assets/images/decor/noel_1.jpg";
 		<Hero>
 			<div slot="hero-content-left" class="prose max-w-none max-lg:order-1">
 				<Badge color="red" title="Delicieux" />
-				<h2 class="font-black h2 my-4">Le Plat De La Seamine</h2>
+				<h2 class="font-black h2 my-4">Le Plat De La Semaine</h2>
 
 				<span class="text-brand-red text-2xl font-bold italic">Risooto Du jour!</span>
 
@@ -302,3 +248,10 @@ import Mussels from "~/assets/images/decor/noel_1.jpg";
 	
 	</Section>
 </Layout>
+
+
+<style>
+	.font-script {
+	  font-family: 'Pacifico', cursive;
+	}
+  </style>

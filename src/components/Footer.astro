@@ -4,18 +4,40 @@ const currentYear = new Date().getFullYear();
 import { siteName } from "~/data/config";
 ---
 
-<footer class="bg-brand-green text-white">
+<footer class="bg-[#1E3A2E] text-white">
 	<div class="container pt-16 pb-8">
-		<p class="text-center font-bold text-4xl text-white">Astro<span class="text-brand-red bg-white px-3 ml-1 rounded-lg">Pie</span></p>
-		<nav class="flex flex-col sm:flex-row items-center justify-center gap-x-12 gap-y-3 font-medium mt-6" aria-label="Footer">
-			{
-				menuMain.map((item) => (
-					<a href={item.url} class="hover:underline">
-						{item.name}
-					</a>
-				))
-			}
-		</nav>
-		<p class="mt-10 text-center text-sm">&copy; {currentYear} {siteName}. All rights reserved. <a class="underline" href="/privacy-policy">Privacy policy</a></p>
+	  <!-- Navigation avec Flexbox et justify-between -->
+	  <nav class="flex items-center justify-between font-medium mt-6" aria-label="Footer">
+		<!-- Liens de la navigation -->
+		<div class="flex gap-x-12">
+		  {
+			menuMain.map((item) => (
+			  <a href={item.url} class="hover:underline">
+				{item.name}
+			  </a>
+			))
+		  }
+		</div>
+  
+		<!-- Logos à droite -->
+		<div class="flex gap-x-6">
+		  <!-- Logo Trustpilot -->
+		  <a href="https://www.trustpilot.com" target="_blank" rel="noopener noreferrer">
+			<i class="fab fa-trustpilot text-white text-2xl"></i> <!-- Icone Trustpilot -->
+		  </a>
+  
+		  <!-- Logo Instagram -->
+		  <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+			<i class="fab fa-instagram text-white text-2xl"></i> <!-- Icone Instagram -->
+		  </a>
+		</div>
+	  </nav>
+  
+	  <!-- Texte de droit d'auteur -->
+	  <p class="mt-10 text-center text-sm">
+		&copy; {currentYear} {siteName}. Tout Droits Réservés. 
+		<a class="underline" href="/privacy-policy">Politique De Confidentialité</a>
+	  </p>
 	</div>
-</footer>
+  </footer>
+  

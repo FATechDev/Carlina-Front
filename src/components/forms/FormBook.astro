@@ -2,7 +2,7 @@
 
 ---
 
-<form action="#">
+<form action="#" id="reservationForm">
 	<div class="flex flex-col gap-8 mx-auto max-w-md">
 		<div>
 			<label for="name">Name</label>
@@ -68,4 +68,67 @@
 			</button>
 		</div>
 	</div>
+
+	<div id="formStatus" class="hidden">
+		<div class="success-message hidden">
+			Reservation successful!
+		</div>
+		<div class="error-message hidden">
+			Something went wrong. Please try again.
+		</div>
+	</div>
+	
 </form>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('reservationForm') as HTMLFormElement;
+
+    const formStatus = document.getElementById('formStatus') as HTMLElement;
+    const successMessage = document.querySelector('.success-message') as HTMLElement;
+    const errorMessage = document.querySelector('.error-message') as HTMLElement;
+
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        const formData = new FormData(form);
+        const data = {
+            name: formData.get('name'),
+            email: formData.get('email'),
+            phone: formData.get('phone'),
+            date_time: formData.get('date'), // Date format: YYYY-MM-DDTHH:mm
+            message: formData.get('message') || ''
+        };
+
+        try {
+            const response = await fetch('http://localhost:8000/api/reservations/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data)
+            });
+
+            formStatus.classList.remove('hidden');
+
+            if (response.ok) {
+                // Réservation réussie
+				console.log(response)
+                successMessage.classList.remove('hidden');
+                errorMessage.classList.add('hidden');
+                form.reset();
+            } else {
+                // Erreur
+                errorMessage.classList.remove('hidden');
+                successMessage.classList.add('hidden');
+                console.error('Erreur lors de la réservation:', await response.json());
+            }
+        } catch (error) {
+            formStatus.classList.remove('hidden');
+            errorMessage.classList.remove('hidden');
+            successMessage.classList.add('hidden');
+            console.error('Erreur:', error);
+        }
+    });
+});

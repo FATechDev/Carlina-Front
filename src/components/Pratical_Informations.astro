@@ -1,46 +1,95 @@
-<div class="flex flex-col lg:flex-row gap-8 mt-10">
-  <!-- Colonne Infos Pratiques -->
-  <div class="flex-1 flex-col">
-      <h2 class="text-2xl font-bold mb-4">Infos pratiques</h2>
-          <div class="mt-8">
-            <p><strong>Cuisine </strong></p>
-            <p class="mt-2">Italienne, Pizza Napolitaine</p>
-          </div>
-          <div class="mt-8">
-            <p><strong>Type de restaurant</strong> </p>
-            <p class="mt-2">Restaurant Italien, Pizza à emporter, Pizza Napolitaine</p>
-          </div>
-          <div class="mt-8">
-            <p><strong>Services</strong></p>
-            <p class="mt-2">Terrasse, Service continu</p>
-          </div>
-          <div class="mt-8">
-            <p><strong>Moyens de paiement</strong> </p>
-          <p class="mt-2"> Ticket Restaurant, Eurocard/Mastercard, Titres restaurant, Espèces, Visa, Carte Bleue </p>
-          </div>
-          
+---
+// Section Infos Pratiques et Horaires pour un restaurant de pizzeria
+---
 
+
+  <div class="container mt-20 mx-auto max-w-6xl flex flex-col lg:flex-row gap-16">
+    <!-- Colonne Infos Pratiques -->
+    <div class="lg:w-1/2 bg-[#F3F4F4] p-10 flex flex-col items-center justify-center">
+      <h2 class="text-3xl font-bold text-gray-800 mb-8 uppercase tracking-wide text-center lg:text-left ">
+        Infos pratiques
+      </h2>
+      <div class="w-20 h-0.5 bg-white mb-4"></div>
+      <div class="space-y-10 text-center">
+        <div>
+          <p class="text-gray-400 uppercase text-sm tracking-wider mb-2">Cuisine</p>
+          <p class="text-gray-700">Restaurant Italien - Pizzeria, Cuisine Fraîche Italienne, Italienne</p>
+        </div>
+        
+        <div>
+          <p class="text-gray-400 uppercase text-sm tracking-wider mb-2">Type de restaurant</p>
+          <p class="text-gray-700">Restaurant Italien - Pizzeria</p>
+        </div>
+        
+        <div>
+          <p class="text-gray-400 uppercase text-sm tracking-wider mb-2">Services</p>
+          <p class="text-gray-700">À emporter, Accès Wifi, Air conditionné - Climatisation</p>
+        </div>
+        
+        <div>
+          <p class="text-gray-400 uppercase text-sm tracking-wider mb-2">Moyens de paiement</p>
+          <p class="text-gray-700">Apple Pay, Paiement Sans Contact, Eurocard/Mastercard, Espèces, Maestro, Visa, Carte Bleue</p>
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- Colonne Horaires -->
+    <div class="lg:w-1/2 flex flex-col items-center justify-center h-full">
+      <h2 class="text-3xl font-bold text-gray-800 mb-8 uppercase tracking-wide text-center lg:text-left">
+        Horaires
+      </h2>
+      <div class="space-y-6 w-full max-w-md">
+        <div class="flex flex-row justify-between border-b pb-4">
+          <p class="text-gray-600">LUN - MARD</p>
+          <div class="flex flex-row gap-8">
+            <p class="text-gray-700">12h00 - 14h30</p>
+            <p class="text-gray-700">19h00 - 22h30</p>
+          </div>
+        </div>
+    
+        <div class="flex flex-row justify-between border-b pb-4">
+          <p class="text-gray-600">MERC</p>
+          <div class="flex flex-row gap-8">
+            <p class="text-gray-700"><strong> Fermé</strong></p>
+          </div>
+        </div>
+    
+        <div class="flex flex-row justify-between border-b pb-4">
+          <p class="text-gray-600">JEUD</p>
+          <div class="flex flex-row gap-8">
+            <p class="text-gray-700">12h00 - 14h30</p>
+            <p class="text-gray-700">19h00 - 22h30</p>
+          </div>
+        </div>
+    
+        <div class="flex flex-row justify-between border-b pb-4">
+          <p class="text-gray-600">VENDREDI - SAMEDI</p>
+          <div class="flex flex-row gap-8">
+            <p class="text-gray-700">12h00 - 14h30</p>
+            <p class="text-gray-700">19h00 - 22h45</p>
+          </div>
+        </div>
+    
+        <div class="flex flex-row justify-between border-b pb-4">
+          <p class="text-gray-600">DIM</p>
+          <div class="flex flex-row gap-8">
+            <p class="text-gray-700"><strong> Fermé</strong></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
   </div>
-
-  <!-- Colonne Horaires -->
-  <div class="flex-1">
-      <h2 class="text-2xl font-bold mb-4">Horaires</h2>
-          <div>
-            <p><strong>Lun - Jeu :</strong> </p>
-            <p>12h00 - 14h30 • 19h00 - 22h30</p>
-          </div>
-          <div>
-            <p><strong>Vendredi :</strong> </p>
-            <p>12h00 - 14h30 • 19h00 - 22h45</p>
-          </div>
-          <div>
-            <p><strong>Samedi :</strong>
-              <p>12h00 - 15h30 • 19h00 - 22h45</p>
-          </div>
-          <div>
-            <p><strong>Dimanche :</strong> </p>
-            <p>12h00 - 15h30 • 19h00 - 22h30</p>
-          </div>
-
+  
+  <!-- Bouton de réservation (optionnel) comme dans l'exemple -->
+  <div class="flex justify-center mt-16">
+    <a href="/reservation" class="flex items-center bg-black text-white px-8 py-4 rounded-md hover:bg-gray-800 transition duration-300">
+      <span class="mr-2">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v3.586l-1.707 1.707a1 1 0 001.414 1.414l2-2a1 1 0 00.293-.707V7z" clip-rule="evenodd" />
+        </svg>
+      </span>
+      Réserver une table
+    </a>
   </div>
-</div>

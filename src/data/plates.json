@@ -1,398 +1,241 @@
 [
 	{
 		"id": 1,
-		"slug": "antipasti",
-		"prettyName": "Antipasti",
+		"slug": "Pizzas",
+		"prettyName": "Pizzas",
 		"description": "Start your meal with one of our delicious appetizers.",
 		"plates": [
 			{
-				"name": "Bruschetta",
-				"description": "Grilled bread topped with fresh tomatoes, garlic, basil, and olive oil.",
-				"price": 6.5
+				"name": "Pizza 4 Fromages",
+				"description": "Base tomate, mozzarella râpée, champignons, chèvre, provola fumé, gorgonzola, fontina, œuf, origan.",
+				"price": 18
 			},
 			{
-				"name": "Caprese",
-				"description": "Slices of mozzarella, tomatoes, and basil drizzled with balsamic glaze.",
-				"price": 8.5
+				"name": "Pizza spéciale pizzaiolo",
+				"description": "Base tomate, mozzarella râpée, champignons, jambon, chorizo, œuf, origan.",
+				"price": 17.5
 			},
 			{
-				"name": "Arancini",
-				"description": "Crispy risotto balls filled with cheese and served with marinara sauce.",
-				"price": 7.5
+				"name": "Pizza orientale",
+				"description": "Base tomate, mozzarella râpée,poivrons, merguez, œuf, olives, origan.",
+				"price": 17.5
 			},
 			{
-				"name": "Prosciutto e Melone",
-				"description": "Cured ham paired with sweet cantaloupe.",
-				"price": 9
+				"name": "Pizza Nordique",
+				"description": "Base crème fraîche ciboulette, mozzarella râpée, saumon fumé, crème fraîche, origan.",
+				"price": 18
 			},
 			{
-				"name": "Antipasto Platter",
-				"description": "A selection of cured meats, cheeses, and marinated vegetables.",
-				"price": 12
+				"name": "Pizza paysanne",
+				"description": "Base tomate, mozzarella râpée, champignons, lardons, crème fraîche, pommes de terre, œuf, origan",
+				"price": 18
+			},
+			{
+				"name": "Pizza calzone",
+				"description": "Base tomate, mozzarella râpée, jambon, œuf. origan.",
+				"price": 15
+			},
+			{
+				"name": "Pizza Margherita",
+				"description": "Base tomate, mozzarella râpée, olives, origan",
+				"price": 13
+			},
+			{
+				"name": "Pizza napolitaine",
+				"description": "Base tomate, mozzarella râpée, câpres, anchois, olives, origan.",
+				"price": 14
+			},
+			{
+				"name": "Pizza campione",
+				"description": "Base tomate, mozzarella râpée, viande bolognaise, chorizo, œuf, origan.",
+				"price": 17.5
+			},
+			{
+				"name": "Pizza quattro stagioni",
+				"description": "Base tomate, mozzarella râpée, jambon, champignons, poivrons, olives, origan.",
+				"price": 17.5
 			}
 		]
 	},
 	{
 		"id": 2,
-		"slug": "insalate",
-		"prettyName": "Insalate",
+		"slug": "Pates",
+		"prettyName": "Pates",
 		"description": "Fresh and healthy salads made with seasonal ingredients.",
 		"plates": [
 			{
-				"name": "Caesar Salad",
-				"description": "Crisp romaine with parmesan, croutons, and Caesar dressing.",
-				"price": 7.5
+				"name": "Pâtes à la bolognaise",
+				"description": "Pâtes, viande hachée, oignons et sauce tomate.",
+				"price": 15
 			},
 			{
-				"name": "Panzanella",
-				"description": "Tuscan bread salad with tomatoes, cucumbers, and basil.",
-				"price": 8
+				"name": "Pâtes à la carbonara",
+				"description": "Pâtes, lardons, oignons, crème fraîche et jaune d'œuf.",
+				"price": 15
 			},
 			{
-				"name": "Insalata Mista",
-				"description": "Mixed greens with cherry tomatoes, cucumbers, and a light vinaigrette.",
-				"price": 6.5
+				"name": "Pâtes all'arrabbiata",
+				"description": "Sauce tomate, piment, ail, basilic et huile d'olive.",
+				"price": 14.5
 			},
 			{
-				"name": "Caprese Salad",
-				"description": "Fresh mozzarella, tomatoes, and basil with balsamic reduction.",
-				"price": 9
+				"name": "Lasagnes al forno",
+				"description": "Pâtes à lasagne, viande hachée, oignons, sauce tomate, béchamel, mozzarella râpée.",
+				"price": 17
 			},
 			{
-				"name": "Arugula Salad",
-				"description": "Peppery arugula with shaved parmesan and lemon dressing.",
-				"price": 7
+				"name": "Penne gratinés au fromage",
+				"description": "Penne gratinées au fromage, des pâtes fondantes enrobées de sauce crémeuse et gratinées à la perfection.",
+				"price": 16
+			},
+			{
+				"name": "Pâtes au pesto",
+				"description": "Pâtes savoureuses enrobées d'un pesto basilic parfumé et gourmand.",
+				"price": 14.5
+			},
+			{
+				"name": "Pâtes à la crème de truffe",
+				"description": "Pâtes onctueuses sublimées par une crème de truffe délicate et raffinée.",
+				"price": 17
 			}
 		]
 	},
 	{
 		"id": 3,
-		"slug": "zuppe",
-		"prettyName": "Zuppe",
+		"slug": "Plats Italiens",
+		"prettyName": "Plats Italiens",
 		"description": "Warm up with one of our delicious soups.",
 		"plates": [
 			{
-				"name": "Minestrone",
-				"description": "Hearty vegetable soup with beans and pasta.",
-				"price": 6.5
+				"name": "Carpaccio de bœuf",
+				"description": "Frites et/ou salade verte",
+				"price": 15
 			},
 			{
-				"name": "Zuppa Toscana",
-				"description": "Creamy soup with potatoes, sausage, and kale.",
-				"price": 7.5
+				"name": "Escalope milanaise",
+				"description": "Escalope de veau panée, pâtes du moment et sauce tomate persil et ail.",
+				"price": 18.5
 			},
 			{
-				"name": "Tomato Basil Soup",
-				"description": "Rich tomato soup with fresh basil.",
-				"price": 5.5
+				"name": "Escalope pizzaiola",
+				"description": "Escalope de veau gratinée au four avec jambon de parme, sauce tomate, crème fraîche et mozarella",
+				"price": 19
 			},
 			{
-				"name": "Lentil Soup",
-				"description": "Healthy lentil soup with vegetables and herbs.",
-				"price": 6
+				"name": "Risotto aux asperges vertes",
+				"description": "Risotto crémeux aux asperges vertes, délicatement parfumé.",
+				"price": 16
 			},
 			{
-				"name": "Seafood Bisque",
-				"description": "Creamy soup with a medley of seafood.",
-				"price": 9.5
+				"name": "Escalope Marsala",
+				"description": "Escalope de veau fondante, sauce Marsala parfumée.",
+				"price": 19
 			}
 		]
 	},
 	{
 		"id": 4,
-		"slug": "first-courses",
-		"prettyName": "First Courses",
+		"slug": "Plats Français",
+		"prettyName": "Plats Français",
 		"description": "Savor the flavors of our exquisite first courses.",
 		"plates": [
 			{
-				"name": "Spaghetti Carbonara",
-				"description": "Classic pasta with pancetta, eggs, and parmesan.",
-				"price": 12
+				"name": "Escalope normande",
+				"description": "Escalope de veau, crème fraîche, champignons, calvados et frites.",
+				"price": 17.5
 			},
 			{
-				"name": "Lasagna Bolognese",
-				"description": "Layered pasta with rich meat sauce and béchamel.",
+				"name": "Tartare de bœuf",
+				"description": "Bœuf frais coupé au couteau, assaisonnement savoureux.",
+				"price": 16.5
+			},
+			{
+				"name": "Cœur de filet",
+				"description": "Filet de bœuf tendre, cuit à la perfection pour une expérience savoureuse.",
+				"price": 24
+			},
+			{
+				"name": "Steak haché frais à cheval",
+				"description": "Steak haché frais, cuit à la perfection, garni d’un œuf au plat pour une touche gourmande.",
 				"price": 14
 			},
 			{
-				"name": "Risotto alla Milanese",
-				"description": "Creamy saffron risotto.",
-				"price": 13.5
+				"name": "Andouillette 5A",
+				"description": "Andouillette 5A, classique de la cuisine française, savoureuse et délicatement parfumée, préparée avec des viandes de qualité.",
+				"price": 17
 			},
 			{
-				"name": "Penne Arrabbiata",
-				"description": "Spicy tomato sauce with garlic and chili peppers.",
-				"price": 11.5
-			},
+				"name": "Piece du boucher~200gr",
+				"description": "Sélection de viande tendre et savoureuse, grillée à la perfection pour un goût authentique.",
+				"price": 18
+			}
+			,			
 			{
-				"name": "Gnocchi al Pesto",
-				"description": "Potato dumplings in basil pesto sauce.",
-				"price": 12.5
+				"name": "Fish and ships",
+				"description": "Filet de poisson frais, enrobé d'une pâte légère et dorée, servi avec des frites croustillantes.",
+				"price": 16
 			}
 		]
 	},
 	{
 		"id": 5,
-		"slug": "second-courses",
-		"prettyName": "Second Courses",
+		"slug": "Crustacés & Poissons",
+		"prettyName": "Crustacés & Poissons",
 		"description": "Indulge in our hearty and satisfying main courses.",
 		"plates": [
 			{
-				"name": "Osso Buco",
-				"description": "Braised veal shank with gremolata and risotto.",
-				"price": 19.5
-			},
-			{
-				"name": "Pollo alla Cacciatora",
-				"description": "Chicken stewed with tomatoes, peppers, and herbs.",
-				"price": 16.5
-			},
-			{
-				"name": "Bistecca alla Fiorentina",
-				"description": "Grilled T-bone steak seasoned with olive oil and herbs.",
-				"price": 25
-			},
-			{
-				"name": "Grilled Sea Bass",
-				"description": "Fresh sea bass with lemon and herbs.",
-				"price": 18.5
-			},
-			{
-				"name": "Eggplant Parmesan",
-				"description": "Baked layers of eggplant, marinara, and mozzarella.",
-				"price": 14.5
+				"name": "Saumon grillé sauce béarnaise",
+				"description": "Pavé de saumon parfaitement grillé, accompagné d'une sauce béarnaise crémeuse et savoureuse, pour un mariage de saveurs délicates et riches.",
+				"price": 17
 			}
 		]
 	},
 	{
 		"id": 6,
-		"slug": "side-dishes",
-		"prettyName": "Side Dishes",
+		"slug": "Dessert",
+		"prettyName": "Dessert",
 		"description": "Complement your meal with our delightful side dishes.",
 		"plates": [
 			{
-				"name": "Grilled Vegetables",
-				"description": "A mix of seasonal vegetables grilled to perfection.",
-				"price": 5.5
+				"name": "Fondant au chocolat",
+				"description": "",
+				"price": 7
 			},
 			{
-				"name": "Roasted Potatoes",
-				"description": "Crispy potatoes seasoned with rosemary and olive oil.",
-				"price": 4.5
+				"name": "Tarte tatin",
+				"description": "",
+				"price": 7
 			},
 			{
-				"name": "Spinach with Garlic",
-				"description": "Sautéed spinach with fresh garlic.",
-				"price": 5
-			},
-			{
-				"name": "Polenta",
-				"description": "Creamy cornmeal with parmesan cheese.",
+				"name": "Tarte citron meringuée",
+				"description": "",
 				"price": 6
 			},
 			{
-				"name": "Caprese Side",
-				"description": "A smaller portion of mozzarella, tomato, and basil.",
-				"price": 4.5
+				"name": "Île flottante",
+				"description": "",
+				"price": 5.5
 			}
 		]
 	},
 	{
 		"id": 7,
-		"slug": "pizza",
-		"prettyName": "Pizza",
+		"slug": "Boissons",
+		"prettyName": "Boissons",
 		"description": "Enjoy our freshly baked pizzas with a variety of toppings.",
 		"plates": [
 			{
-				"name": "Margherita",
-				"description": "Classic pizza with tomato, mozzarella, and basil.",
-				"price": 10.5
+				"name": "Coca-Cola",
+				"description": "",
+				"price": 3
 			},
 			{
-				"name": "Quattro Stagioni",
-				"description": "Four seasons pizza with artichokes, ham, mushrooms, and olives.",
-				"price": 12.5
-			},
-			{
-				"name": "Diavola",
-				"description": "Spicy salami with tomato sauce and mozzarella.",
-				"price": 11.5
-			},
-			{
-				"name": "Prosciutto e Funghi",
-				"description": "Ham and mushrooms with mozzarella and tomato sauce.",
-				"price": 12
-			},
-			{
-				"name": "Vegetariana",
-				"description": "A mix of seasonal vegetables and mozzarella.",
-				"price": 11
-			}
-		]
-	},
-	{
-		"id": 8,
-		"slug": "specials",
-		"prettyName": "Specials",
-		"description": "Discover our chef's special creations for the day.",
-		"plates": [
-			{
-				"name": "Truffle Risotto",
-				"description": "Creamy risotto infused with black truffle.",
-				"price": 18.5
-			},
-			{
-				"name": "Lobster Ravioli",
-				"description": "Homemade ravioli filled with lobster in a saffron sauce.",
-				"price": 20.5
-			},
-			{
-				"name": "Porcini Mushroom Pasta",
-				"description": "Fresh pasta with porcini mushrooms and a cream sauce.",
-				"price": 17.5
-			},
-			{
-				"name": "Veal Marsala",
-				"description": "Tender veal in a Marsala wine sauce.",
-				"price": 19.5
-			},
-			{
-				"name": "Stuffed Zucchini Flowers",
-				"description": "Crispy zucchini flowers filled with ricotta and herbs.",
-				"price": 15.5
-			}
-		]
-	},
-	{
-		"id": 9,
-		"slug": "kids-menu",
-		"prettyName": "Kids Menu",
-		"description": "Delicious and fun meals for our younger guests.",
-		"plates": [
-			{
-				"name": "Mini Margherita",
-				"description": "Kid-sized pizza with tomato and mozzarella.",
-				"price": 6.5
-			},
-			{
-				"name": "Spaghetti Butter & Cheese",
-				"description": "Simple pasta with butter and parmesan.",
-				"price": 5.5
-			},
-			{
-				"name": "Chicken Nuggets & Fries",
-				"description": "Crispy chicken bites with golden fries.",
-				"price": 7
-			},
-			{
-				"name": "Mini Lasagna",
-				"description": "Smaller portion of our classic lasagna.",
-				"price": 7.5
-			},
-			{
-				"name": "Mac & Cheese",
-				"description": "Cheesy pasta perfect for kids.",
-				"price": 6
-			}
-		]
-	},
-	{
-		"id": 10,
-		"slug": "desserts",
-		"prettyName": "Desserts",
-		"description": "End your meal with one of our sweet and delightful desserts.",
-		"plates": [
-			{
-				"name": "Tiramisu",
-				"description": "Classic Italian dessert with layers of mascarpone and coffee-soaked ladyfingers.",
-				"price": 6.5
-			},
-			{
-				"name": "Panna Cotta",
-				"description": "Creamy custard dessert with a berry coulis.",
-				"price": 6
-			},
-			{
-				"name": "Cannoli",
-				"description": "Crispy pastry shells filled with sweet ricotta cream.",
-				"price": 5.5
-			},
-			{
-				"name": "Gelato",
-				"description": "Choice of two scoops of our homemade Italian ice cream.",
-				"price": 4.5
-			},
-			{
-				"name": "Affogato",
-				"description": "Vanilla gelato topped with a shot of espresso.",
-				"price": 5.5
-			}
-		]
-	},
-	{
-		"id": 11,
-		"slug": "beverages",
-		"prettyName": "Beverages",
-		"description": "Refresh yourself with our selection of drinks.",
-		"plates": [
-			{
-				"name": "Sparkling Water",
-				"description": "Chilled sparkling mineral water.",
-				"price": 2.5
-			},
-			{
-				"name": "Still Water",
-				"description": "Chilled still mineral water.",
-				"price": 2
-			},
-			{
-				"name": "Espresso",
-				"description": "Strong Italian coffee shot.",
-				"price": 2.5
-			},
-			{
-				"name": "Cappuccino",
-				"description": "Espresso with steamed milk and foam.",
-				"price": 3.5
-			},
-			{
-				"name": "Lemonade",
-				"description": "Fresh homemade lemonade.",
+				"name": "Perrier",
+				"description": "",
 				"price": 3
 			}
-		]
-	},
-	{
-		"id": 12,
-		"slug": "wines",
-		"prettyName": "Wines",
-		"description": "Choose from our curated list of fine wines.",
-		"plates": [
-			{
-				"name": "Chianti",
-				"description": "Classic red wine from Tuscany.",
-				"price": 6.5
-			},
-			{
-				"name": "Pinot Grigio",
-				"description": "Crisp and refreshing white wine.",
-				"price": 6
-			},
-			{
-				"name": "Prosecco",
-				"description": "Sparkling wine from Veneto.",
-				"price": 7
-			},
-			{
-				"name": "Barolo",
-				"description": "Full-bodied red wine from Piedmont.",
-				"price": 9
-			},
-			{
-				"name": "Rosé",
-				"description": "Light and fruity wine perfect for any meal.",
-				"price": 6.5
-			}
+		
 		]
 	}
+	
 ]

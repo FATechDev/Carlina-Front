@@ -1,0 +1,36 @@
+---
+const { image, alt, title, text } = Astro.props;
+---
+
+<section class="relative h-[600px] md:h-[500px] lg:h-[600px] overflow-hidden">
+  <!-- Image de fond avec effet parallax -->
+  <div
+    class="absolute top-0 left-0 w-full h-full bg-cover bg-center bg-fixed will-change-transform"
+    style={`background-image: url(${image.src});`}
+    data-parallax
+  ></div>
+
+  <!-- Titre et texte au-dessus de l'image (fixe) -->
+  <div class="relative z-10 flex flex-col items-center justify-center h-full text-white text-center">
+    <h2 class="text-3xl md:text-4xl font-bold drop-shadow-md">{title}</h2>
+    <p class="text-lg mt-2 drop-shadow-md">{text}</p>
+  </div>
+</section>
+
+<script>
+  // Fonction pour appliquer l'effet parallax
+  document.addEventListener("scroll", () => {
+    document.querySelectorAll("[data-parallax]").forEach((el) => {
+      const element = el as HTMLElement; // Cast en HTMLElement pour TypeScript
+
+      // Calcul du défilement
+      const scrollY = window.scrollY;
+
+      // On applique un effet plus prononcé
+      const offset = scrollY * 0.3; // Ajuste la vitesse ici (0.3 est plus perceptible que 0.1)
+
+      // Applique la transformation uniquement à l'image, pas au texte
+      element.style.transform = `translateY(${offset}px)`;
+    });
+  });
+</script>

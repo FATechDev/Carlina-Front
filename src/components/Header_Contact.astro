@@ -24,6 +24,7 @@ const pathname = rmTrailingSlash(Astro.url.pathname);
 
 
 <header x-data="{ open: false }" @keydown.window.escape="open = false"  class="bg-[url('../assets/images/decor/kitchen.jpeg')] bg-cover bg-center min-h-[600px] relative brightness-85">
+
 	<div class="container py-6  static">
 		<nav class="flex items-center justify-between h-16" aria-label="Global" >
             <Image src={Logo} class=" pointer-events-auto " alt="Drapeau italien" width={275} height={75} />

@@ -1,0 +1,17 @@
+---
+const { image, alt, class: className = "" } = Astro.props;
+---
+
+<div
+  class:list={[className, "w-full h-[500px] bg-fixed bg-cover bg-center"]}
+  style={`background-image: url('${image.src}');`}
+  role="img"
+  aria-label={alt}
+></div>
+
+
+
+<script type="module">
+  import { initTWE } from 'tw-elements';
+  initTWE();
+</script>

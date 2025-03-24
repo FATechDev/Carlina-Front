@@ -1,0 +1,19 @@
+---
+import { Picture } from "astro:assets";
+const { image, alt, title, text, class: className } = Astro.props;
+---
+
+<section class="relative w-full">
+  <!-- Titre et texte au-dessus de l'image -->
+  <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white z-10">
+    <h2 class="text-7xl font-bold mb-4 font-herrvonmuellerhoff text-custom-gold">{title}</h2>
+    <p class="text-3xl">{text}</p>
+  </div>
+
+  <!-- Image de fond -->
+  <Picture
+    src={image}
+    alt={alt}
+    class:list={[className, "object-cover object-center w-full"]}
+  />
+</section>
