@@ -3,12 +3,12 @@
 
 
 // Images
-import Kitchen from "~/assets/images/decor/kitchen.jpeg";
 import Logo from "~/assets/logo_carlina.png";
 
 
 import { Image }  from "astro:assets";
 import Italia_Drapeau from "~/assets/images/decor/italy.png";
+import Kitchen from "~/assets/images/decor/kitchen.jpeg";
 
 import { menuMain } from "~/data/menus.js";
 
@@ -26,11 +26,10 @@ const pathname = rmTrailingSlash(Astro.url.pathname);
 <header x-data="{ open: false }" @keydown.window.escape="open = false" class="min-h-[600px] relative">
     <!-- Image de fond assombrie -->
     <div 
-        class="absolute inset-0 bg-[url('../assets/images/decor/kitchen.jpeg')] bg-cover bg-center" 
-        style="
-            filter: brightness(0.50);
-            z-index: -1;
-        "
+        class="absolute inset-0 bg-cover bg-center" 
+
+		style={`filter: brightness(0.50); z-index: -1; background-image: url('${Kitchen.src}');`}
+
     ></div>
 
 	<div class="container py-6  static">
