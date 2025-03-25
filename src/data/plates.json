@@ -3,7 +3,7 @@
 		"id": 1,
 		"slug": "Pizzas",
 		"prettyName": "Pizzas",
-		"description": "Start your meal with one of our delicious appetizers.",
+		"description": "Savourez nos délicieuses pizzas préparées avec des ingrédients frais et une pâte maison croustillante ! 🍕",
 		"plates": [
 			{
 				"name": "Pizza 4 Fromages",
@@ -61,7 +61,7 @@
 		"id": 2,
 		"slug": "Pates",
 		"prettyName": "Pates",
-		"description": "Fresh and healthy salads made with seasonal ingredients.",
+		"description": "Dégustez nos pâtes savoureuses, préparées avec des sauces maison et des ingrédients frais ! 🍝",
 		"plates": [
 			{
 				"name": "Pâtes à la bolognaise",
@@ -104,7 +104,7 @@
 		"id": 3,
 		"slug": "Plats Italiens",
 		"prettyName": "Plats Italiens",
-		"description": "Warm up with one of our delicious soups.",
+		"description": "Retrouvez le vrai goût de l’Italie avec nos plats traditionnels et généreux !",
 		"plates": [
 			{
 				"name": "Carpaccio de bœuf",
@@ -137,7 +137,7 @@
 		"id": 4,
 		"slug": "Plats Français",
 		"prettyName": "Plats Français",
-		"description": "Savor the flavors of our exquisite first courses.",
+		"description": "Découvrez l’élégance de la cuisine française avec nos recettes authentiques et savoureuses !",
 		"plates": [
 			{
 				"name": "Escalope normande",
@@ -194,7 +194,7 @@
 		"id": 6,
 		"slug": "Dessert",
 		"prettyName": "Dessert",
-		"description": "Complement your meal with our delightful side dishes.",
+		"description": "Terminez sur une note sucrée avec nos délicieux desserts faits maison !",
 		"plates": [
 			{
 				"name": "Fondant au chocolat",
@@ -222,7 +222,7 @@
 		"id": 7,
 		"slug": "Boissons",
 		"prettyName": "Boissons",
-		"description": "Enjoy our freshly baked pizzas with a variety of toppings.",
+		"description": "Sélection de boissons rafraîchissantes et de vins soigneusement choisis pour accompagner votre repas.",
 		"plates": [
 			{
 				"name": "Coca-Cola",

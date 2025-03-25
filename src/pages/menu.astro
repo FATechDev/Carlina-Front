@@ -5,11 +5,13 @@ import Heading from "~/components/Heading.astro";
 import MenuList from "~/components/Menu.astro";
 import Carroussel from "~/components/Carroussel.astro";
 
-import Burrata from "~/assets/images/salades/buratta.jpg";
+import Burrata from "~/assets/images/salades/Burrata_Redimension.jpg";
+import Raclette from "~/assets/images/plat/Raclettes.jpg";
+import PizzaCarlina from "~/assets/images/plat/PizzaCarlina.jpg";
 ---
 
 <Layout>
-	<Carroussel image1={Burrata} image2={Burrata} image3={Burrata} alt="Some Images Galleries"/>
+	<Carroussel image1={Burrata} image2={Raclette} image3={PizzaCarlina} alt="Some Images Galleries"/>
 	<Section>		
 		<MenuList />
 	</Section>

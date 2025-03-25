@@ -3,93 +3,80 @@
 ---
 
 
-  <div class="container mt-20 mx-auto max-w-6xl flex flex-col lg:flex-row gap-16">
-    <!-- Colonne Infos Pratiques -->
-    <div class="lg:w-1/2 bg-[#F3F4F4] p-10 flex flex-col items-center justify-center">
-      <h2 class="text-3xl font-bold text-gray-800 mb-8 uppercase tracking-wide text-center lg:text-left ">
-        Infos pratiques
-      </h2>
-      <div class="w-20 h-0.5 bg-white mb-4"></div>
-      <div class="space-y-10 text-center">
-        <div>
-          <p class="text-gray-400 uppercase text-sm tracking-wider mb-2">Cuisine</p>
-          <p class="text-gray-700">Restaurant Italien - Pizzeria, Cuisine Fraîche Italienne, Italienne</p>
-        </div>
-        
-        <div>
-          <p class="text-gray-400 uppercase text-sm tracking-wider mb-2">Type de restaurant</p>
-          <p class="text-gray-700">Restaurant Italien - Pizzeria</p>
-        </div>
-        
-        <div>
-          <p class="text-gray-400 uppercase text-sm tracking-wider mb-2">Services</p>
-          <p class="text-gray-700">À emporter, Accès Wifi, Air conditionné - Climatisation</p>
-        </div>
-        
-        <div>
-          <p class="text-gray-400 uppercase text-sm tracking-wider mb-2">Moyens de paiement</p>
-          <p class="text-gray-700">Apple Pay, Paiement Sans Contact, Eurocard/Mastercard, Espèces, Maestro, Visa, Carte Bleue</p>
-        </div>
+<div class="container mt-20 mx-auto max-w-6xl flex flex-col lg:flex-row gap-16">
+  <!-- Colonne Infos Pratiques -->
+  <div class="w-full lg:w-1/2 bg-[#F3F4F4] p-6 lg:p-10 flex flex-col items-center justify-center">
+    <h2 class="text-2xl lg:text-3xl font-bold text-gray-800 mb-6 lg:mb-8 uppercase tracking-wide text-center">
+      Infos pratiques
+    </h2>
+    <div class="w-20 h-0.5 bg-white mb-4"></div>
+    <div class="space-y-6 lg:space-y-10 text-center">
+      <div>
+        <p class="text-gray-400 uppercase text-xs lg:text-sm tracking-wider mb-2">Cuisine</p>
+        <p class="text-gray-700 text-sm lg:text-base">Restaurant Italien - Pizzeria, Cuisine Fraîche Italienne, Italienne</p>
+      </div>
+      
+      <div>
+        <p class="text-gray-400 uppercase text-xs lg:text-sm tracking-wider mb-2">Type de restaurant</p>
+        <p class="text-gray-700 text-sm lg:text-base">Restaurant Italien - Pizzeria</p>
+      </div>
+      
+      <div>
+        <p class="text-gray-400 uppercase text-xs lg:text-sm tracking-wider mb-2">Services</p>
+        <p class="text-gray-700 text-sm lg:text-base">À emporter, Accès Wifi, Air conditionné - Climatisation</p>
+      </div>
+      
+      <div>
+        <p class="text-gray-400 uppercase text-xs lg:text-sm tracking-wider mb-2">Moyens de paiement</p>
+        <p class="text-gray-700 text-sm lg:text-base">Apple Pay, Paiement Sans Contact, Eurocard/Mastercard, Espèces, Maestro, Visa, Carte Bleue</p>
       </div>
     </div>
-    
-
-    <!-- Colonne Horaires -->
-    <div class="lg:w-1/2 flex flex-col items-center justify-center h-full">
-      <h2 class="text-3xl font-bold text-gray-800 mb-8 uppercase tracking-wide text-center lg:text-left">
-        Horaires
-      </h2>
-      <div class="space-y-6 w-full max-w-md">
-        <div class="flex flex-row justify-between border-b pb-4">
-          <p class="text-gray-600">LUN - MARD</p>
-          <div class="flex flex-row gap-8">
-            <p class="text-gray-700">12h00 - 14h30</p>
-            <p class="text-gray-700">19h00 - 22h30</p>
-          </div>
-        </div>
-    
-        <div class="flex flex-row justify-between border-b pb-4">
-          <p class="text-gray-600">MERC</p>
-          <div class="flex flex-row gap-8">
-            <p class="text-gray-700"><strong> Fermé</strong></p>
-          </div>
-        </div>
-    
-        <div class="flex flex-row justify-between border-b pb-4">
-          <p class="text-gray-600">JEUD</p>
-          <div class="flex flex-row gap-8">
-            <p class="text-gray-700">12h00 - 14h30</p>
-            <p class="text-gray-700">19h00 - 22h30</p>
-          </div>
-        </div>
-    
-        <div class="flex flex-row justify-between border-b pb-4">
-          <p class="text-gray-600">VENDREDI - SAMEDI</p>
-          <div class="flex flex-row gap-8">
-            <p class="text-gray-700">12h00 - 14h30</p>
-            <p class="text-gray-700">19h00 - 22h45</p>
-          </div>
-        </div>
-    
-        <div class="flex flex-row justify-between border-b pb-4">
-          <p class="text-gray-600">DIM</p>
-          <div class="flex flex-row gap-8">
-            <p class="text-gray-700"><strong> Fermé</strong></p>
-          </div>
-        </div>
-      </div>
-    </div>
-    
   </div>
   
-  <!-- Bouton de réservation (optionnel) comme dans l'exemple -->
-  <div class="flex justify-center mt-16">
-    <a href="/reservation" class="flex items-center bg-black text-white px-8 py-4 rounded-md hover:bg-gray-800 transition duration-300">
-      <span class="mr-2">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v3.586l-1.707 1.707a1 1 0 001.414 1.414l2-2a1 1 0 00.293-.707V7z" clip-rule="evenodd" />
-        </svg>
-      </span>
-      Réserver une table
-    </a>
+
+  <!-- Colonne Horaires -->
+  <div class="w-full lg:w-1/2 flex flex-col items-center justify-center h-full px-4 lg:px-0">
+    <h2 class="text-2xl lg:text-3xl font-bold text-gray-800 mb-6 lg:mb-8 uppercase tracking-wide text-center">
+      Horaires
+    </h2>
+    <div class="space-y-4 lg:space-y-6 w-full max-w-md">
+      <div class="flex flex-row justify-between border-b pb-2 lg:pb-4">
+        <p class="text-xs lg:text-base text-gray-600">LUN - MARD</p>
+        <div class="flex flex-row gap-4 lg:gap-8">
+          <p class="text-xs lg:text-base text-gray-700">12h00 - 14h30</p>
+          <p class="text-xs lg:text-base text-gray-700">19h00 - 22h30</p>
+        </div>
+      </div>
+  
+      <div class="flex flex-row justify-between border-b pb-2 lg:pb-4">
+        <p class="text-xs lg:text-base text-gray-600">MERC</p>
+        <div class="flex flex-row gap-4 lg:gap-8">
+          <p class="text-xs lg:text-base text-gray-700"><strong>Fermé</strong></p>
+        </div>
+      </div>
+  
+      <div class="flex flex-row justify-between border-b pb-2 lg:pb-4">
+        <p class="text-xs lg:text-base text-gray-600">JEUD</p>
+        <div class="flex flex-row gap-4 lg:gap-8">
+          <p class="text-xs lg:text-base text-gray-700">12h00 - 14h30</p>
+          <p class="text-xs lg:text-base text-gray-700">19h00 - 22h30</p>
+        </div>
+      </div>
+  
+      <div class="flex flex-row justify-between border-b pb-2 lg:pb-4">
+        <p class="text-xs lg:text-base text-gray-600">VENDREDI - SAMEDI</p>
+        <div class="flex flex-row gap-4 lg:gap-8">
+          <p class="text-xs lg:text-base text-gray-700">12h00 - 14h30</p>
+          <p class="text-xs lg:text-base text-gray-700">19h00 - 22h45</p>
+        </div>
+      </div>
+  
+      <div class="flex flex-row justify-between border-b pb-2 lg:pb-4">
+        <p class="text-xs lg:text-base text-gray-600">DIM</p>
+        <div class="flex flex-row gap-4 lg:gap-8">
+          <p class="text-xs lg:text-base text-gray-700"><strong>Fermé</strong></p>
+        </div>
+      </div>
+    </div>
   </div>
+</div>

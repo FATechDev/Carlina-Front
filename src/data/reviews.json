@@ -2,31 +2,29 @@
 	{
 		"id": 1,
 		"author": "Mona B.",
-		"review": "Un saveur hyper chaleureux et très à l’écoute. Des plats délicieux. Je recommande à 1000% et je reviendrai. Franchement la qualité du service est à féliciter",
-		"mealImage":"/src/assets/images/reviews/mona.jpg"
+		"review": "J’y ai emmené mes parents dîner, ils ont tout de suite adopté le restaurant comme nous. Le service était très lent ce jour là mais le repas au top.",
+		"mealImage":"/src/assets/images/reviews/family_mona.jpg",
+		"pubDate":"2024-07-04"
 	},
 	{
 		"id": 2,
 		"author": "Laurence J",
 		"review": "Un endroit sympa. Ne pas hésiter à regarder les ardoises en salle qui proposent bien plus de choix que le menu. Des produits frais et des plats conviviaux.",
-		"mealImage":"/src/assets/images/reviews/laurence.jpg"
+		"mealImage":"/src/assets/images/reviews/laurence.jpg",
+		"pubDate":"2023-05-07"
 	},
 	{
 		"id": 3,
 		"author": "Michel K",
 		"review": "Nous avions la mission immédiate de faire découvrir la ville de Meulan et son histoire à une centaine de personnes. C'est pourquoi j'ai, particulièrement apprécié le bon accueil et l'excellente organisation pour la prise de commande, à distance et à l'avance, des six pizzas de notre groupe.",
-		"mealImage":"/src/assets/images/reviews/Michel.jpg"
+		"mealImage":"/src/assets/images/reviews/Michel.jpg",
+		"pubDate":"2022-09-28"
 	},
 	{
 		"id": 4,
 		"author": "QuiltonSebastien",
 		"review": "Les années passent et ce restaurant fait toujours partie de mes habitudes. Personnel charmant, souriant et à l’écoute. La cuisine quand à elle est variée avec de très bonne suggestion. Le tout à tarif raisonnable. Tout est réuni pour passer un agréable moment.",
-		"mealImage":"/src/assets/images/reviews/sebastien.jpg"
-	},
-	{
-		"id": 5,
-		"author": "Alain M",
-		"review": "Soirée organisé par la Sculture.Personnels agréables ,les pizzas sont très bonnes le reste des plats ont l air bien servie.",
-		"mealImage":"/src/assets/images/reviews/mona.jpg"
+		"mealImage":"/src/assets/images/reviews/sebastien.jpg",
+		"pubDate":"2019-10-07"
 	}
 ]

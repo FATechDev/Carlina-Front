@@ -4,9 +4,12 @@ const allReviews = await getCollection("reviews");
 import { Picture } from "astro:assets";
 
 import Hook from "~/assets/icon_hook.svg";
-
+import { formatDate } from "../utils";
 import MonaImage from '~/assets/images/reviews/mona.jpg';
 import MonaPerson from '~/assets/images/reviews/mona_person.jpg';
+import MichelPerson from '~/assets/images/reviews/michel_person.jpg';
+import LaurencePerson from '~/assets/images/reviews/laurence_person.jpg';
+import SebastienPerson from '~/assets/images/reviews/sebastien_person.jpg';
 import LaurenceImage from '~/assets/images/reviews/laurence.jpg';
 import MichelImage from '~/assets/images/reviews/Michel.jpg';
 import SebastienImage from '~/assets/images/reviews/sebastien.jpg';
@@ -18,21 +21,27 @@ import SebastienImage from '~/assets/images/reviews/sebastien.jpg';
 			allReviews.map((review, index) => {
         // Sélectionner l'image correspondante en fonction de l'index
         let mealImage;
+        let personImage
         switch (index) {
           case 0:
             mealImage = MonaImage;
+            personImage=MonaPerson
             break;
           case 1:
             mealImage = LaurenceImage;
+            personImage=LaurencePerson
             break;
           case 2:
             mealImage = MichelImage;
+            personImage=MichelPerson;
             break;
           case 3:
             mealImage = SebastienImage;
+            personImage=SebastienPerson;
             break;
           default:
             mealImage = MonaImage; // Valeur par défaut si besoin
+            personImage=SebastienPerson;
         }
 
         return (
@@ -41,12 +50,12 @@ import SebastienImage from '~/assets/images/reviews/sebastien.jpg';
         <div class="flex justify-center items-center gap-3 sm:gap-4">
             <Picture
                 class="w-12 h-12 sm:w-14 sm:h-14 object-cover rounded-full"
-                src={MonaPerson}
+                src={personImage}
                 alt="Repas image"
             />
             <div>
                 <h6 class="font-semibold text-base sm:text-lg">{review.data.author}</h6>
-                <h8 class="text-gray-500 text-xs sm:text-sm">24 Mars 2025</h8>
+                <h8 class="text-gray-500 text-xs sm:text-sm">{formatDate(review.data.pubDate)}</h8>
             </div>
         </div>
 

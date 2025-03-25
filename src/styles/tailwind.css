@@ -11,6 +11,10 @@ body {
 	@apply h-full scroll-smooth font-inter text-gray-700;
 }
 
+.font-special {
+	font-family: "Italianno", sans-serif;
+  }
+
 h1,
 h2,
 h3,

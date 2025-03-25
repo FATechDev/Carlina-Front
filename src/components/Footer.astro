@@ -2,17 +2,21 @@
 import { menuMain } from "~/data/menus";
 const currentYear = new Date().getFullYear();
 import { siteName } from "~/data/config";
+import Logo from "../assets/logo_carlina.png"
+import { Image } from "astro:assets";
+import Tripdavisor from "../assets/Tripadvisor.svg"
 ---
 
 <footer class="bg-[#1E3A2E] text-white">
-	<div class="container pt-16 pb-8">
+	<div class="container flex flex-col items-center justify-center pt-16 pb-8">
 	  <!-- Navigation avec Flexbox et justify-between -->
-	  <nav class="flex items-center justify-between font-medium mt-6" aria-label="Footer">
+	   <Image src={Logo} alt="Logo Carlina" width={300} height={100} />
+	  <nav class="flex flex-col items-center md:flex flex-row justify-between gap-x-12 gap-y-3 font-medium mt-6" aria-label="Footer">
 		<!-- Liens de la navigation -->
-		<div class="flex gap-x-12">
+		<div class="flex flex-col gap-y-1 items-center md:flex-row  gap-x-12">
 		  {
 			menuMain.map((item) => (
-			  <a href={item.url} class="hover:underline">
+			  <a href={item.url} class="hover:underline text-2xl/9 md:text-lg">
 				{item.name}
 			  </a>
 			))
@@ -20,24 +24,26 @@ import { siteName } from "~/data/config";
 		</div>
   
 		<!-- Logos à droite -->
-		<div class="flex gap-x-6">
-		  <!-- Logo Trustpilot -->
-		  <a href="https://www.trustpilot.com" target="_blank" rel="noopener noreferrer">
-			<i class="fab fa-trustpilot text-white text-2xl"></i> <!-- Icone Trustpilot -->
-		  </a>
-  
-		  <!-- Logo Instagram -->
-		  <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-			<i class="fab fa-instagram text-white text-2xl"></i> <!-- Icone Instagram -->
-		  </a>
+	<!-- Logos à droite -->
+		<div class="gap-x-6 mt-3 flex gap-y-6">
+			<!-- Logo Trustpilot -->
+			<a href="https://www.tripadvisor.fr/Restaurant_Review-g1219684-d2694286-Reviews-or30-Restaurant_Pizzeria_Carlina-Meulan_Yvelines_Ile_de_France.html" target="_blank" rel="noopener noreferrer">
+				<Image src={Tripdavisor} alt="Tripadvisor Logo" width={30} height={30} />
+			</a>
+		
+			<!-- Logo Instagram -->
+			<a href="https://www.instagram.com/la_carlina_78?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer">
+			<i class="fab fa-instagram text-white text-2xl"></i> <!-- Icône Instagram -->
+			</a>
 		</div>
+  
 	  </nav>
   
 	  <!-- Texte de droit d'auteur -->
-	  <p class="mt-10 text-center text-sm">
+	  <p class="mt-4 text-md  text-center text-sm">
 		&copy; {currentYear} {siteName}. Tout Droits Réservés. 
-		<a class="underline" href="/privacy-policy">Politique De Confidentialité</a>
 	  </p>
 	</div>
   </footer>
+  
   

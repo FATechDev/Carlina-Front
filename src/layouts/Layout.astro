@@ -18,33 +18,12 @@ import { siteLang, themeColor } from "~/data/config";
 		<meta name="robots" content="index,follow" />
 		<meta name="googlebot" content="index,follow" />
 		<link rel="author" href="humans.txt" />
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/css/tw-elements.min.css" />
-		<link href="https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff:wght@400&display=swap" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-		<!-- <link
-			rel="apple-touch-icon"
-			sizes="180x180"
-			href="/images/favicon/apple-touch-icon.png"
-		/>
-		<link
-			rel="icon"
-			type="image/png"
-			sizes="32x32"
-			href="/images/favicon/favicon-32x32.png"
-		/>
-		<link
-			rel="icon"
-			type="image/png"
-			sizes="16x16"
-			href="/images/favicon/favicon-16x16.png"
-		/>
-		<link rel="manifest" href="/site.webmanifest" />
-		<link
-			rel="mask-icon"
-			href="/images/favicon/safari-pinned-tab.svg"
-			color="#E6F4FF"
-		/> -->
+<!-- Inclure Font Awesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Herr+Von+Muellerhoff&family=Italianno&display=swap" rel="stylesheet">
+	
 		<meta name="msapplication-TileColor" content="#ffffff" />
 
 		<meta property="og:url" content={Astro.url} />
@@ -67,8 +46,24 @@ import { siteLang, themeColor } from "~/data/config";
 		<Header />
 		<main>
 			<slot />
+
 		</main>
 		<Footer />
-		<script src="https://cdn.jsdelivr.net/npm/tw-elements/js/tw-elements.umd.min.js"></script>
+		
 	</body>
+
+	
 </html>
+<script >
+	import { initCarousel } from "../scripts/tw-element.ts";
+	initCarousel();
+  </script>
+  
+
+<style>
+	html, body {
+  overflow-x: hidden;
+}
+</style>
+
+

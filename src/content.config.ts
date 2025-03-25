@@ -22,6 +22,7 @@ const reviews = defineCollection({
 	schema: z.object({
 		author: z.string(),
 		review: z.string(),
+		pubDate: z.coerce.date(), // coerce.date() convertit une string en date
 	}),
 });
 

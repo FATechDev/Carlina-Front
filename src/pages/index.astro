@@ -6,9 +6,7 @@ import { Picture, Image } from "astro:assets";
 import Badge from "~/components/Badge.astro";
 import Button from "~/components/Button.astro";
 import ButtonCallUs from "~/components/ButtonCallUs.astro";
-import Grid from "~/components/Grid.astro";
 import TripadvisorSection from "~/components/TripadvisorSection.astro";
-import Heading from "~/components/Heading.astro";
 import WideImageParallax from "~/components/WideImageParallax.astro";
 import ReviewSlider from "~/components/ReviewSlider.astro";
 import Map from "~/components/Map.astro";
@@ -24,18 +22,20 @@ import Terrasse from "~/assets/images/decor/terrasse.jpg";
 import Terrasse2 from "~/assets/images/decor/terrasse2.jpg";
 import CartePaysage from "~/assets/images/carte_resto_paysage.jpg";
 import Dessert from "~/assets/images/dessert/cream-dessert.png";
-import Mussels from "~/assets/images/decor/noel_1.jpg";
+import Fidelite from "~/assets/images/decor/Carte_Fidelite.jpg";
+import Journal from "~/assets/images/decor/Journal.jpg";
 import GalleryCard from "~/components/GalleryCard.astro";
+import Spaghetti from "~/assets/images/plat/spaghetti.png"
 
 
 ---
 
-<Layout title="Accueil" pageTitle="Accueil" description="Bienvenue Dans Notre Restaurant !">
+<Layout title="Home" pageTitle="Home" description="Welcome to our restaurant!">
 	<Section class:list={"bg-white"}>
 		<Hero>
 			<div slot="hero-content-left" class="prose max-w-none max-lg:order-1">
 				<Badge title="Ristorante italiana" />
-				<h2 class="font-black sm:mt-4 md:mt-4">De la vraie cuisine italienne dans un vrai restaurant italien...</h1>
+				<h2 class="font-black">De la vraie cuisine italienne dans un vrai restaurant italien...</h1>
 
 				<p>
 					Découvrez le goût de l'Italie avec nos plats authentiques préparés à partir des meilleurs ingrédients. Offrez-vous
@@ -51,7 +51,7 @@ import GalleryCard from "~/components/GalleryCard.astro";
 			</div>
 			<div slot="hero-content-right">
 				<Picture
-					class:list={"mx-auto"}
+					class:list={"mx-auto max-w-full"}
 					src={PizzaHero}
 					height={600}
 					formats={["avif", "webp"]}
@@ -63,20 +63,20 @@ import GalleryCard from "~/components/GalleryCard.astro";
 		</Hero>
 	</Section>
 
-	<WideImageParallax image={PhotoResto} alt="Just an image" class="aspect-video lg:aspect-[16/6]" />
+	<WideImageParallax image={PhotoResto} alt="Just an image" class="w-full mb-5 h-auto aspect-[4/3] sm:aspect-[16/9] md:aspect-[16/9] lg:aspect-[16/6]" />
 
 	
   
 
-	<Section class:list={"bg-white mt-20 mb-20"} contain={false}>
+	<Section class:list={"mb-4 mt-4 py-16"} contain={false}>
 		<GridCard />
 
-	</Section>
+	</Section> 
 
-	<Section class:list={"bg-white"}>
+	<Section class:list={"bg-white"} >
 		<Hero>
 			<div slot="hero-content-left" class="prose max-w-none max-lg:order-1">
-				<GalleryCard image1={Madame} image2={Terrasse} image3={CartePaysage} image4={Carte2} image5={Terrasse2} image6={Decor_Noel}  alt="Image Gallery"/>
+				<GalleryCard image1={Madame} image2={Terrasse} image3={CartePaysage} image4={Carte2} image5={Terrasse2} image6={Fidelite}  alt="Image Gallery"/>
 
 			</div>
 
@@ -114,12 +114,10 @@ import GalleryCard from "~/components/GalleryCard.astro";
 				<Badge color="red" title="Delicieux" />
 				<h2 class="font-black h2 my-4">Le Plat De La Semaine</h2>
 
-				<span class="text-brand-red text-2xl font-bold italic">Risooto Du jour!</span>
+				<span class="text-brand-red text-2xl font-bold italic">Nos Spaghettis!</span>
 
 				<p>
-					Notre plat de la semaine est un plat délicieux qui change chaque semaine. Cette semaine, nous vous proposons le risotto du jour
-					cuites dans une sauce au vin blanc et à l'ail, servies avec des frites croustillantes. Ne manquez pas
-					cette offre à durée limitée !
+					Cette semaine, notre plat vedette met à l'honneur les spaghettis ! Savourez de délicieuses pâtes al dente enrobées d'une sauce tomate maison mijotée avec des herbes aromatiques et une touche d'ail. Accompagnées de parmesan fraîchement râpé et de basilic, elles sont servies avec une tranche de pain à l'ail croustillant. Ne passez pas à côté de cette offre gourmande et éphémère !
 				</p>
 
 				<div class="mt-8">
@@ -128,8 +126,8 @@ import GalleryCard from "~/components/GalleryCard.astro";
 			</div>
 			<div slot="hero-content-right">
 				<Picture
-					class:list={"mx-auto"}
-					src={Mussels}
+					class:list={"mx-auto  max-w-full"}
+					src={Spaghetti}
 					height={600}
 					formats={["avif", "webp"]}
 					alt="A description of my image."

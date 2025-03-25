@@ -1,6 +1,7 @@
 ---
+import { Image } from "astro:assets";
 import { menuMain } from "~/data/menus.js";
-
+import Logo from "../assets/logo_carlina.png"
 const rmTrailingSlash = (path: string): string => {
   return path.endsWith("/") && path.length > 1 
     ? path.slice(0, path.length - 1) 
@@ -11,10 +12,11 @@ const pathname = rmTrailingSlash(Astro.url.pathname);
 ---
 
 <header x-data="{ open: false }" @keydown.window.escape="open = false">
-	<div class="container py-6">
-		<nav class="flex items-center justify-between" aria-label="Global">
+	<div class="w-full mr-auto ml-auto px-2.5 py-8 ">
+		<nav class="flex items-center justify-between " aria-label="Global">
 			<a href="/" class="-m-1.5 p-1.5">
-				<img src="../../public/logo_carlina.png" alt="Logo Carlina" class="w-auto h-10">
+				<!-- <img src="../../public/logo_carlina.png" alt="Logo Carlina" class="w-auto h-10"> -->
+				<Image src={Logo} alt="Logo Carlina" width={300} height={50} />
 			</a>
 			<div class="flex lg:hidden">
 				<button

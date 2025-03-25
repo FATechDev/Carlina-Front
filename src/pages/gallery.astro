@@ -5,7 +5,8 @@ import Heading from "~/components/Heading.astro";
 import { Picture } from "astro:assets";
 
 // Dynamically import all images from the gallery directory
-const imageModules = await Astro.glob('../assets/images/decor/*.jpg');
+const imageModules = await Astro.glob('../assets/images/gallery/*.jpg');
+console.log(imageModules)
 
 // Map the imported modules to extract image metadata
 const images = imageModules.map((module) => module.default);

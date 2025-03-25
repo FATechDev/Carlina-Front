@@ -3,20 +3,18 @@ import Layout from "~/layouts/Layout.astro";
 import Section from "~/components/Section.astro";
 import Hero from "~/components/Hero.astro";
 import { Picture, Image } from "astro:assets";
-import Badge from "~/components/Badge.astro";
-import Button from "~/components/Button.astro";
-import ButtonCallUs from "~/components/ButtonCallUs.astro";
 import Article from "~/components/Article.astro";
-import Parallax from "~/components/Parallax.astro";
+
 
 // Images
 import Terrasse from "~/assets/images/decor/terrasse_resize.jpg";
-import Terrasse2 from "~/assets/images/decor/terrasse2.jpg";
 import Burrata from "~/assets/images/plat/burrata_citron_resize.jpg";
 import Pizza from "~/assets/images/plat/pizza.jpg";
 import PhotoResto2 from "~/assets/images/restaurant_photo_2.jpg";
 import Cosmopolitan from "~/assets/images/boisson/cosmopolitan_on_point_resize.jpg";
 import WideImageText from "~/components/WideImageText.astro";
+import WideImageParallax from "~/components/WideImageParallax.astro";
+import Flag from   "~/assets/images/decor/italy.png"
 
 
 ---
@@ -26,101 +24,113 @@ import WideImageText from "~/components/WideImageText.astro";
 
 		<WideImageText image={PhotoResto2} title="La Carlina" text="Notre Restaurant" alt="Just an image" class:list={"aspect-video lg:aspect-[16/6]"} />
 		<Hero>
-			<div slot="hero-content-left" class="prose max-w-none max-lg:order-1 ml-10 ">
-				
-				<p class="text-sm ">
-					La Villa César est un restaurant de spécialité italienne qui est situé aux Mureaux dans les Yvelines (78).
+			<div slot="hero-content-left" class="prose max-w-none max-lg:order-1 mt-6 ml-10">
+				<p class="text-sm">
+					<span class="font-bold">La Carlina</span> est un restaurant de spécialité italienne qui est situé au coeur de <span class="font-bold">Meulan</span> dans les Yvelines (78).
 				</p>
-
+		
 				<p class="text-sm mt-10">
-					N’attendez plus pour réserver votre table chez nous et pour découvrir notre carte variée.
+					Situé au cœur de Meulan, Carlina Meulan vous propose une véritable expérience culinaire italienne comme nulle part ailleurs. Dès que vous franchissez nos portes, vous êtes transporté dans les rues animées de l'Italie, où de délicieuses pizzas et des pâtes maison vous attendent dans une ambiance chaleureuse et conviviale.
+
+				</p>
+		
+				<p class="text-sm mt-10">
+					N'attendez plus pour réserver votre table chez nous et pour découvrir notre carte variée.
 					Pizza au feu de bois sur place ou à emporter ouvert 7j/7.
 				</p>
-
-				<p class="text-sm mt-10">
-					Nous sommes à votre disposition pour répondre à vos questions concernant nos événements et nos formules d’organisation de réceptions.
-				</p>
-
-
 			</div>
-			<div slot="hero-content-right">
-
-				<div class="grid grid-cols-1 md:grid-cols-2 gap-8 m-10">
+			<div slot="hero-content-right" class="max-lg:order-2">
+				<div class="grid grid-cols-2 md:grid-cols-2 gap-8 m-5">
 					<!-- Image en haut à gauche -->
 					<div class="relative">
-					  <Image 
-						src={Burrata}
-						alt="Image 1" 
-						class="w-full h-auto object-cover " 
-						width={500} 
-						height={300} 
-					  />
+						<Image 
+							src={Burrata}
+							alt="Image 1" 
+							class="w-full h-auto object-cover hover:opacity-75 transition duration-300 ease-in-out" 
+							width={500} 
+							height={300} 
+						/>
 					</div>
-				  
+					
 					<!-- Image en haut à droite -->
 					<div class="relative">
-					  <Image 
-						src={Terrasse}
-						alt="Image 2" 
-						class="w-full h-auto object-cover " 
-						width={500} 
-						height={300} 
-					  />
+						<Image 
+							src={Terrasse}
+							alt="Image 2" 
+							class="w-full h-auto object-cover hover:opacity-75 transition duration-300 ease-in-out" 
+							width={500} 
+							height={300} 
+						/>
 					</div>
-				  
+					
 					<!-- Image en bas à gauche -->
 					<div class="relative">
-					  <Image 
-						src={Cosmopolitan}
-						alt="Image 3" 
-						class="w-full h-auto object-cover " 
-						width={500} 
-						height={300} 
-					  />
+						<Image 
+							src={Cosmopolitan}
+							alt="Image 3" 
+							class="w-full h-auto object-cover hover:opacity-75 transition duration-300 ease-in-out" 
+							width={500} 
+							height={300} 
+						/>
 					</div>
-				  
+					
 					<!-- Image en bas à droite -->
 					<div class="relative">
-					  <Image 
-						src={Pizza} 
-						alt="Image 4" 
-						class="w-full h-auto object-cover " 
-						width={500} 
-						height={300} 
-					  />
+						<Image 
+							src={Pizza} 
+							alt="Image 4" 
+							class="w-full h-auto object-cover hover:opacity-75 transition duration-300 ease-in-out" 
+							width={500} 
+							height={300} 
+						/>
 					</div>
-				  </div>
-
-				
+				</div>
 			</div>
 		</Hero>
 	</Section>
 
-	<Parallax image={Terrasse2}  alt="Belle image en parallax" 
+	<!-- <Parallax image={Terrasse2}  alt="Belle image en parallax" 
 	title="Bienvenue" 
-	text="Profitez de l'effet parallax"/>
+	text="Profitez de l'effet parallax"/> -->
+
+	<WideImageParallax  title="Notre Terrasse" image={Terrasse} alt="Just an image" class="w-full mb-2 h-auto aspect-[4/3] sm:aspect-[16/9] md:aspect-[16/9] lg:aspect-[16/6]" />
 
 	<Section class:list={'bg-white'}>
 		<Article>
-			<h2 class="text-brand-green">Bienvenue chez Carlina Meulan</h2>
-			<p>
-				Situé au cœur de Meulan, <strong>Carlina Meulan</strong> vous propose une véritable expérience culinaire italienne comme nulle part ailleurs. Dès que vous franchissez nos portes, vous êtes transporté dans les rues animées de l'Italie, où de délicieuses pizzas et des pâtes maison vous attendent dans une ambiance chaleureuse et conviviale.
+
+			<h3 class="text-brand-green text-2xl md:text-4xl">D’où vient la magie Carlina ?</h3>
+			<Image 
+			src={Flag}  
+			class="mt-2 pointer-events-auto w-16 h-1 md:w-32 md:h-auto"  
+			width={32} 
+			height={192} 
+			alt="Flag Italy" 
+			/>
+			<p class="text-sm md:text-lg">
+				Né d’un rêve familial en <em>2001</em> et d’une passion inébranlable pour la gastronomie italienne, Italian Kitchen est plus qu’un restaurant : c’est une invitation au voyage au cœur de l’Italie. Depuis notre ouverture, nous avons eu un seul but : partager l’amour et le respect de la cuisine italienne authentique avec nos convives. 
 			</p>
 
-			<h3 class="text-brand-green">Notre Histoire</h3>
-			<p>
-				Founded in <em>1998</em>, our family-owned restaurant has always been a labor of love. Inspired by the
-				recipes passed down through generations, we bring the <u>rich culinary heritage</u> of Italy to your plate.
-				Every dish tells a story, and every meal is a celebration of flavor.
-			</p>
-
-			<h3 class="text-brand-green">Notre Philosophie</h3>
+			<h3 class="text-brand-green text-2xl md:text-4xl">Notre Philosophie</h3>
+			<Image 
+				src={Flag}  
+				class="mt-2 pointer-events-auto w-16 h-1 md:w-32 md:h-auto"  
+				width={32} 
+				height={128} 
+				alt="Flag Italy" 
+			/>
 			<blockquote>"L'ingrédient secret, c'est toujours l'amour."</blockquote>
-			<p>
+			<p class="text-sm md:text-lg">
 				Chez Carlina Meulan, nous croyons à la joie de cuisiner avec des ingrédients frais et de qualité. Nos recettes sont élaborées avec passion et soin, qu'il s'agisse de nos pizzas cuites au feu de bois, de nos sauces savoureuses ou de nos pâtes faites maison. Chaque bouchée est un véritable voyage en Italie, préparée avec amour.
 			</p>
 
-			<h4 class="text-brand-green">Ce qui fait notre Spécialité ?</h4>
+			<h4 class="text-brand-green text-2xl md:text-4xl">Ce qui fait notre Spécialité ?</h4>
+			<Image 
+				src={Flag}  
+				class="mt-2 pointer-events-auto w-16 h-1 md:w-32 md:h-auto"  
+				width={32} 
+				height={128} 
+				alt="Flag Italy" 
+			/>
 			<ul>
 				<li><strong>Authenticité:</strong> Des recettes italiennes traditionnelles, préparées comme le faisait Nonna.</li>
 				<li><strong>Ingrédients frais:</strong> Des produits locaux de qualité et des spécialités italiennes importées.</li>

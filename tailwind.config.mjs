@@ -7,6 +7,7 @@ export default {
 			fontFamily: {
 				inter: ["Inter", "sans-serif"],
 				'herrvonmuellerhoff': ['"Herr Von Muellerhoff"', 'cursive'],
+				'italianno':["Italianno",'sans-serif']
 			},
 			colors: {
 				brand: {
