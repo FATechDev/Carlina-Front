@@ -1,7 +1,7 @@
 ---
 
 import { Picture, Image } from "astro:assets";
-const { image1,image2,image3, alt, class: className = "" } = Astro.props;
+const { image1,image2, alt, class: className = "" } = Astro.props;
 
 ---
 <div
@@ -40,22 +40,6 @@ const { image1,image2,image3, alt, class: className = "" } = Astro.props;
       />
       <div class="absolute inset-0 flex flex-col items-center justify-center text-center text-white bg-gradient-to-t from-black/70 to-black/20">
         <h5 class="text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-special font-thin  text-shadow text-[#C59D5F] tracking-wider">La Carlina</h5>
-        <p class="max-w-md font-light tracking-normal px-4 text-xl md:text-3xl lg:text-4xl xl:text-5xl">
-          NOTRE CARTE
-        </p>
-      </div>
-    </div>
-    <!--Third item-->
-    <div
-      class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
-      data-twe-carousel-item>
-      <Image
-      src={image3}
-      alt={alt}
-      class:list={[className, "block w-full md:h-[500px] aspect-video aspect-[4/3] object-cover"]}
-      />
-      <div class="absolute inset-0 flex flex-col items-center justify-center text-center text-white bg-gradient-to-t from-black/70 to-black/20">
-        <h5 class="text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-special font-thin text-shadow text-[#C59D5F] tracking-wider">La Carlina</h5>
         <p class="max-w-md font-light tracking-normal px-4 text-xl md:text-3xl lg:text-4xl xl:text-5xl">
           NOTRE CARTE
         </p>
