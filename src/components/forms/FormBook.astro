@@ -1,8 +1,8 @@
 ---
-
+import ReservationScript from '../ReservationScript.ts'
 ---
 
-<form action="#" id="reservationForm">
+<form action="#" id="reservationForm" method="post">
 	<div class="flex flex-col gap-8 mx-auto max-w-md">
 		<div>
 			<label for="name">Prénom</label>
@@ -16,6 +16,7 @@
 			<div class="mt-2 grid grid-cols-1">
 				<input type="email" name="email" id="email" required />
 			</div>
+			<small class="italic text-gray-500">Un Email sera envoyé pour confirmer votre réservation</small>
 		</div>
 
 		<div>
@@ -26,7 +27,40 @@
 			<small class="italic text-gray-500">Un SMS sera envoyé pour confirmer votre réservation</small>
 		</div>
 
+
 		<div>
+			<label for="date">Date de réservation</label>
+			<input 
+			  type="date" 
+			  id="dateReservation" 
+			  name="date" 
+			  class="w-full p-3 rounded-lg border- border-white bg-[#157F71] text-white placeholder-white focus:outline-none focus:ring-2 focus:ring-white"
+			  required 
+			/>
+			<p id="closedMessage" style="color: red; display: none;">Désolé, nous sommes fermés ce jour-là.</p>
+		  </div>
+		
+		  <div id="creneauxContainer" style="display:none;" class="flex justify-between gap-2">
+			<!-- Créneaux Midi -->
+			<div class="w-1/2">
+				<label for="creneauMidi">Créneaux Midi</label>
+				<select id="creneauMidi" name="creneauMidi" class="w-full p-3 rounded-lg border-2 border-[#157F71] bg-[#157F71] text-white focus:outline-none focus:ring-2 focus:ring-white">
+					<!-- Les créneaux midi seront ajoutés ici dynamiquement -->
+				</select>
+			</div>
+		
+			<!-- Créneaux Soir -->
+			<div class="w-1/2">
+				<label for="creneauSoir">Créneaux Soir</label>
+				<select id="creneauSoir" name="creneauSoir" class="w-full p-3 rounded-lg border-2 border-[#157F71] bg-[#157F71] text-white focus:outline-none focus:ring-2 focus:ring-white">
+					<!-- Les créneaux soir seront ajoutés ici dynamiquement -->
+				</select>
+			</div>
+		</div>
+		
+		
+
+		<!-- <div>
 			<label for="date">Date & Time</label>
 			<div class="mt-2">
 				<input type="datetime-local" name="date" id="date" required />
@@ -34,8 +68,13 @@
 			<small class="italic text-gray-500"
 				>Nous ne pouvons garantir la disponibilité à l'heure et à la date choisies.</small
 			>
+		</div> -->
+		<div>
+			<label for="nombre_personne">Nombre de personnes</label>
+			<div class="mt-2">
+				<input type="number" name="nombre_personne" id="nombre_personne" required />
+			</div>
 		</div>
-
 		<div>
 			<label for="message">Notes</label>
 			<div class="mt-2">
@@ -69,66 +108,11 @@
 		</div>
 	</div>
 
-	<div id="formStatus" class="hidden">
-		<div class="success-message hidden">
-			Reservation successful!
-		</div>
-		<div class="error-message hidden">
-			Something went wrong. Please try again.
-		</div>
-	</div>
 	
 </form>
-
-
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-    const form = document.getElementById('reservationForm') as HTMLFormElement;
-
-    const formStatus = document.getElementById('formStatus') as HTMLElement;
-    const successMessage = document.querySelector('.success-message') as HTMLElement;
-    const errorMessage = document.querySelector('.error-message') as HTMLElement;
-
-    form.addEventListener('submit', async (e) => {
-        e.preventDefault();
-
-        const formData = new FormData(form);
-        const data = {
-            name: formData.get('name'),
-            email: formData.get('email'),
-            phone: formData.get('phone'),
-            date_time: formData.get('date'), // Date format: YYYY-MM-DDTHH:mm
-            message: formData.get('message') || ''
-        };
-
-        try {
-            const response = await fetch('http://localhost:8000/api/reservations/', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(data)
-            });
-
-            formStatus.classList.remove('hidden');
-
-            if (response.ok) {
-                // Réservation réussie
-				console.log(response)
-                successMessage.classList.remove('hidden');
-                errorMessage.classList.add('hidden');
-                form.reset();
-            } else {
-                // Erreur
-                errorMessage.classList.remove('hidden');
-                successMessage.classList.add('hidden');
-                console.error('Erreur lors de la réservation:', await response.json());
-            }
-        } catch (error) {
-            formStatus.classList.remove('hidden');
-            errorMessage.classList.remove('hidden');
-            successMessage.classList.add('hidden');
-            console.error('Erreur:', error);
-        }
-    });
-});
+<div id="confirmationMessage" class="text-brand-green text-center text-xl mt-6 opacity-0 transition-opacity duration-500">
+	✅ Votre réservation a bien été confirmée. Merci !
+  </div>
+  
+  
+<ReservationScript client:load />
